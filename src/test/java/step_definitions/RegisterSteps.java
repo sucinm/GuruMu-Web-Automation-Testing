@@ -12,4 +12,6 @@ public class RegisterSteps {
         this.webDriver = Hooks.webDriver;
         registerPage = new RegisterPage(webDriver);
     }
+
+
 }
