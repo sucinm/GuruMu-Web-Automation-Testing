@@ -1,6 +1,13 @@
 @Test
 Feature: Penilaian Ulasan
 
+  Background:
+    Given User open the website GuruMu
+    When User click avatar navigation
+    And User click menu Masuk
+    And User input "johndoe@gmail.com" as email and input "pass12345" as password
+    When User move to Profile Page
+
   Scenario Outline: Verify teacher name is displayed
     Given Student already on profile page
     And Sub menu Riwayat is active

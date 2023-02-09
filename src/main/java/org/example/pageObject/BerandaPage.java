@@ -15,35 +15,46 @@ public class BerandaPage {
         this.driver = driver;
     }
 
-    @FindBy(id = "")
+    @FindBy(id = "input-pencarianMapel")
     private WebElement inputMataPelajaran;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-pencarianLokasi")
     private WebElement inputLokasi;
 
-    @FindBy(id = "")
+    @FindBy(css = ".pt-0")
     private WebElement buttonIconCari;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//div[@class='dropdown dropdown-end']/label[@class='btn btn-ghost btn-circle avatar']")
+    private WebElement navbar;
+
+    @FindBy(xpath = "//a[.='Home']")
     private WebElement berandaLink;
 
-    @FindBy(id = "")
+    @FindBy(css = ".dropdown")
     private WebElement navBar;
 
-    @FindBy(id = "")
+    @FindBy(id = "link-profil")
     private WebElement navbarProfile;
 
-    @FindBy(id = "")
+    @FindBy(css = ".gap-4")
     private WebElement gridListGuru;
 
     @FindBy(id = "")
     private WebElement alertNotFound;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-pencarianMapel-alert")
     private WebElement alertErrorInputMataPelajaran;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-pencarianLokasi-alert")
     private WebElement alertErrorInputLokasi;
+
+
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement successMessage;
+
+    @FindBy(css = ".swal2-confirm")
+    private WebElement buttonConfirmSuccessMessage;
+
 
 
     public void setMataPelajaran(String mataPelajaran) {
@@ -56,11 +67,11 @@ public class BerandaPage {
 
 
     public String getInputMataPelajaran() {
-        return inputMataPelajaran.getText();
+        return inputMataPelajaran.getAttribute("value");
     }
 
     public String getInputLokasi() {
-        return inputLokasi.getText();
+        return inputLokasi.getAttribute("value");
     }
 
     public String getErrorInputMataPelajaran(){
@@ -70,11 +81,14 @@ public class BerandaPage {
     public String getErrorInputLokasi(){
         return alertErrorInputLokasi.getText();
     }
-    
+
     public void clickIconButtonCari() {
         buttonIconCari.click();
     }
 
+    public void clickNavigation(){
+        navbar.click();
+    }
     public void clickBerandaLink() {
         berandaLink.click();
     }
@@ -87,6 +101,9 @@ public class BerandaPage {
         inputLokasi.click();
     }
 
+    public void clickButtonConfirmationSuccessMessage(){
+        buttonConfirmSuccessMessage.click();
+    }
     public boolean isInputMataPelajaranEnabled(){
         return inputMataPelajaran.isEnabled();
     }
@@ -124,7 +141,7 @@ public class BerandaPage {
     }
 
     public boolean isDisplayListGuruByLokasi(String lokasi) {
-        boolean dataReturn = gridListGuru.findElement(By.xpath("//div[text()='" + lokasi + "']")).isDisplayed();
+        boolean dataReturn = gridListGuru.findElement(By.xpath("//p[.='" + lokasi + "']")).isDisplayed();
         return dataReturn;
     }
 
@@ -133,5 +150,7 @@ public class BerandaPage {
         return dataReturn;
     }
 
-
+    public boolean successMessageIsDisplayed(){
+        return successMessage.isDisplayed();
+    }
 }

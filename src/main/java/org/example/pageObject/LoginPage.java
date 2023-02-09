@@ -13,17 +13,18 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    @FindBy(xpath = "//input[@id='email']")
+    @FindBy(id = "input-email")
     private WebElement email;
 
-    @FindBy(xpath = "//input[@id='password']")
+    @FindBy(id = "input-password")
     private WebElement password;
 
-    @FindBy(id = "login-button")
+    @FindBy(id = "btn-masuk")
     private WebElement btnLogin;
 
     @FindBy(xpath = "//h3")
     private WebElement errorMessage;
+
 
     public void setEmail(String eml){
         email.sendKeys(eml);
@@ -45,4 +46,6 @@ public class LoginPage {
     public String getErrorText(){
         return errorMessage.getText();
     }
+
+
 }

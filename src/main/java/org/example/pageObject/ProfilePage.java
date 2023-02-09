@@ -14,7 +14,7 @@ public class ProfilePage {
         this.driver = driver;
     }
 
-    @FindBy(id = "")
+    @FindBy(id = "link-profil")
     private WebElement navbarProfil;
 
     @FindBy(id = "")

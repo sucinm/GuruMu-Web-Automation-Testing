@@ -13,22 +13,22 @@ public class LandingPage {
         this.driver = driver;
     }
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//div[@class='dropdown dropdown-end']/label[@class='btn btn-ghost btn-circle avatar']")
     private WebElement navbar;
 
-    @FindBy(id = "")
+    @FindBy(id = "btn-auth")
     private WebElement navbarSubMenuMasuk;
 
     @FindBy(id = "")
     private WebElement navbarSubMenuDaftar;
 
-    @FindBy(id = "")
+    @FindBy(id = "btn-landing-page")
     private WebElement buttonPilihGuruDisini;
 
-    @FindBy(id = "")
+    @FindBy(css = ".pb-12")
     private WebElement gridListPenilaianGuru;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//h1[.='1. Pilih guru anda']")
     private WebElement gridListTahapanGuruMu;
 
     public void clickNavbar(){

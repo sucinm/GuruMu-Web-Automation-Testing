@@ -14,7 +14,7 @@ public class Hooks {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+  "/driver/chromedriver");
 
         webDriver = new ChromeDriver();
-        String appUrl = "https://devmyproject.site/";
+        String appUrl = "https://guru-mu.vercel.app/";
         webDriver.get(appUrl);
         webDriver.manage().window().maximize();
     }
