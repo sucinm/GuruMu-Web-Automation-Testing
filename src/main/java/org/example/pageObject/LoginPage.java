@@ -64,8 +64,7 @@ public class LoginPage {
     }
 
     public boolean disableBtn(){
-        btnLogin.isEnabled();
-        return false;
+        return btnLogin.isEnabled();
     }
 
     public String getAlert(){
