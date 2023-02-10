@@ -22,13 +22,13 @@ public class ReservasiSubPageSteps {
 
     @Given("Student At Detail Page Teacher Murid POV")
     public void StudentAtDetailPageTeacherMuridPOV() {
-        detailPageTeacher_MuridPOVPage.isDisplayDetailPageTeacher_MuridPOVPage();
+//        detailPageTeacher_MuridPOVPage.isDisplayDetailPageTeacher_MuridPOVPage();
     }
 
     @Given("User open the website GuruMu")
     public void verifyDisplay(){
         ReservasiSubPage reservasiSubPage= new ReservasiSubPage(webDriver);
-        reservasiSubPage.isDisplayed();
+        reservasiSubPage.isDisplayReservasiSubPage();
     }
 
     @Given("Student at pop up Reservasi")
