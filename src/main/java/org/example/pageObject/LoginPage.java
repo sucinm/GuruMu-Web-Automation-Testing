@@ -13,18 +13,29 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    @FindBy(id = "input-email")
+    @FindBy(xpath = "//input[@id='input-email']")
     private WebElement email;
 
-    @FindBy(id = "input-password")
+    @FindBy(xpath = "//input[@id='input-password']")
     private WebElement password;
 
-    @FindBy(id = "btn-masuk")
+    @FindBy(xpath = "//button[@id='btn-masuk']")
     private WebElement btnLogin;
 
     @FindBy(xpath = "//h3")
     private WebElement errorMessage;
 
+    @FindBy(xpath = "//label[@class='btn btn-ghost btn-circle avatar']")
+    private WebElement avatarButton;
+
+    @FindBy(xpath = "//button[@id='btn-auth']")
+    private WebElement dropDownAvatar;
+
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement succesLogin;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement okBtn;
 
     public void setEmail(String eml){
         email.sendKeys(eml);
@@ -47,5 +58,29 @@ public class LoginPage {
         return errorMessage.getText();
     }
 
+    public void avatarBtn() {
+        avatarButton.click();
+        dropDownAvatar.click();
+    }
 
+    public boolean disableBtn(){
+        btnLogin.isEnabled();
+        return false;
+    }
+
+    public String getAlert(){
+        return driver.switchTo().alert().getText();
+    }
+
+    public void alertBtn(){
+        driver.switchTo().alert().accept();
+    }
+
+    public String getSucces(){
+        return succesLogin.getText();
+    }
+
+    public void setOkBtn(){
+        okBtn.click();
+    }
 }
