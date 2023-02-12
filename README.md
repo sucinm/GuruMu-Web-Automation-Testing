@@ -1,9 +1,8 @@
 <div align="center">
-<img width="40%" src="./images/GuruMu.svg"><br/>
-<summary><h1 style="display-inline:block">GuruMu</h1></summary>
+<img width="30%" src="./images/GuruMu.png"><br/>
 Capstone Program Immersive Alterra Academy <br/>
 <a href="https://docs.google.com/spreadsheets/d/1Kg8dDKjBzhwlkfl451ZoAEAidEMkXQqVzcSYILJjGOI/edit#gid=1600377082" target="blank"><img src="https://img.shields.io/badge/-Test%20Scenario-181717?style=for-the-badge&logo=microsoft-excel&color=f09559&logoColor=white" /></a>
-<a href="https://app.swaggerhub.com/apis-docs/CapstoneAltaBE14/GuruMu/1.0.0#/" target="blank"><img src="https://img.shields.io/badge/-Web%20Documentation-181717?style=for-the-badge&logo=swagger&color=f09559&logoColor=white" /></a>
+<a href="https://guru-mu.vercel.app/" target="blank"><img src="https://img.shields.io/badge/-Website%20GuruMu-181717?style=for-the-badge&logo=www&color=f09559&logoColor=white" /></a>
     
 </div>
     
