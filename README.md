@@ -2,6 +2,7 @@
 <img width="30%" src="./images/GuruMu.png"><br/>
 Capstone Program Immersive Alterra Academy <br/>
 <a href="https://docs.google.com/spreadsheets/d/1Kg8dDKjBzhwlkfl451ZoAEAidEMkXQqVzcSYILJjGOI/edit#gid=1600377082" target="blank"><img src="https://img.shields.io/badge/-Test%20Scenario-181717?style=for-the-badge&logo=microsoft-excel&color=f09559&logoColor=white" /></a>
+<a href="https://docs.google.com/presentation/d/10s1E8kp7J1FfBo_kir2odUjMtftLUqo5/edit?usp=sharing&ouid=113060634627923997336&rtpof=true&sd=true" target="blank"><img src="https://img.shields.io/badge/-Presentation%20GuruMU-181717?style=for-the-badge&logo=microsoft-PowerPoint&color=f09559&logoColor=white" /></a>
 <a href="https://guru-mu.vercel.app/" target="blank"><img src="https://img.shields.io/badge/-Website%20GuruMu-181717?style=for-the-badge&logo=www&color=f09559&logoColor=white" /></a>
     
 </div>
