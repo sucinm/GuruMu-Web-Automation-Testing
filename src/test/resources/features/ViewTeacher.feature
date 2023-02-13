@@ -1,6 +1,13 @@
 @Test
 Feature: View Teacher
 
+  Background:
+    Given User open the website GuruMu
+    When User click avatar navigation
+    And User click menu Masuk
+    And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
+
+
   Scenario: Verify 'user' button is enabled
     Given Teacher already on Beranda / Home
     When Teacher click 'user' button

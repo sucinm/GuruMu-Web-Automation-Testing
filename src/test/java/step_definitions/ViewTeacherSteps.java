@@ -1,22 +1,20 @@
 package step_definitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.example.pageObject.updateStudentPage;
 import org.openqa.selenium.WebDriver;
-import org.example.pageObject.viewTeacherPage;
-public class viewTeacherSteps {
+import org.example.pageObject.ViewTeacherPage;
+public class ViewTeacherSteps {
 
     private WebDriver webDriver;
-    viewTeacherPage viewTeacherPage;
+    ViewTeacherPage viewTeacherPage;
 
-    public viewTeacherSteps() {
+    public ViewTeacherSteps() {
         super();
         this.webDriver = Hooks.webDriver;
-        viewTeacherPage = new viewTeacherPage(webDriver);
+        viewTeacherPage = new ViewTeacherPage(webDriver);
     }
 
     @Given("Teacher already on Beranda / Home")

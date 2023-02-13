@@ -4,19 +4,18 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.example.pageObject.updateStudentPage;
-import org.example.pageObject.viewStudentPage;
+import org.example.pageObject.ViewStudentPage;
 import org.openqa.selenium.WebDriver;
 
-public class viewStudentSteps {
+public class ViewStudentSteps {
 
     private WebDriver webDriver;
-    viewStudentPage viewStudentPage;
+    ViewStudentPage viewStudentPage;
 
-    public viewStudentSteps() {
+    public ViewStudentSteps() {
         super();
         this.webDriver = Hooks.webDriver;
-        viewStudentPage = new viewStudentPage(webDriver);
+        viewStudentPage = new ViewStudentPage(webDriver);
     }
 
     @Given("Student already on Beranda / Home")

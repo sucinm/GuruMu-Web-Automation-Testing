@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class viewStudentPage {
+public class ViewStudentPage {
     public WebDriver driver;
 
-    public viewStudentPage(WebDriver webDriver) {
+    public ViewStudentPage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
         this.driver = webDriver;
     }

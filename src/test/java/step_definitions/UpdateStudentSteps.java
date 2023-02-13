@@ -4,19 +4,17 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.en.And;
-import org.example.pageObject.updateStudentPage;
-import org.example.pageObject.updateTeacherPage;
+import org.example.pageObject.UpdateStudentPage;
 import org.openqa.selenium.WebDriver;
 
-public class updateStudentSteps {
+public class UpdateStudentSteps {
     private WebDriver webDriver;
-    updateStudentPage updateStudentPage;
+    UpdateStudentPage updateStudentPage;
 
-    public updateStudentSteps() {
+    public UpdateStudentSteps() {
         super();
         this.webDriver = Hooks.webDriver;
-        updateStudentPage = new updateStudentPage(webDriver);
+        updateStudentPage = new UpdateStudentPage(webDriver);
     }
 
     @Given("Student already on Edit Profile page")

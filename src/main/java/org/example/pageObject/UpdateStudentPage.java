@@ -4,17 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class updateStudentPage {
+public class UpdateStudentPage {
 
     private WebDriver webDriver;
 
-    updateStudentPage updateStudentPage;
+    UpdateStudentPage updateStudentPage;
     private CharSequence email;
 
-    public updateStudentPage(WebDriver webDriver) {
+    public UpdateStudentPage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
         this.webDriver = webDriver;
     }

@@ -1,6 +1,5 @@
 package org.example.pageObject;
 
-import cucumber.api.java.eo.Se;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -15,11 +14,11 @@ import java.time.temporal.Temporal;
 import java.time.temporal.TemporalUnit;
 import java.util.List;
 
-public class updateTeacherPage {
+public class UpdateTeacherPage {
 
     public WebDriver driver;
 
-    public updateTeacherPage(WebDriver webDriver) {
+    public UpdateTeacherPage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
         this.driver = webDriver;
     }
