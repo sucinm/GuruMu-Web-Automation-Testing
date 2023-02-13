@@ -61,10 +61,16 @@ public class PenilaianUlasanSteps {
         profilePage.clickNavbarRiwayat();
     }
 
-    @And("Sub menu Riwayat is active")
-    public void subMenuRiwayatIsActive() {
+    @And("Click Riwayat and Sub menu Riwayat is active")
+    public void subMenuRiwayatIsActive() throws InterruptedException {
+        Thread.sleep(10000);
+        BerandaPage berandaPage = new BerandaPage(webDriver);
         ProfilePage profilePage = new ProfilePage(webDriver);
-        profilePage.isActiveNavbarRiwayat();
+//        if(berandaPage.successMessageIsDisplayed()) {
+//            berandaPage.clickButtonConfirmationSuccessMessage();
+//        }
+        berandaPage.clickNavigation();
+        profilePage.clickNavbarRiwayat();
     }
 
     @When("Student click link ulasan in row \"(.*)\" as teacher")
@@ -76,11 +82,13 @@ public class PenilaianUlasanSteps {
     @Then("Show penilaian dan ulasan popup")
     public void showPenilaianDanUlasanPopup() {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        penilaianUlasanPage.isDisplayPenilaianUlasanPage();
+        Assert.assertTrue(penilaianUlasanPage.isDisplayPenilaianUlasanPage());
     }
 
     @And("Show \"(.*)\" on penilaian dan ulasan popup")
     public void showOnPenilaianDanUlasanPopup(String teacherName) {
+        PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
+        Assert.assertTrue(penilaianUlasanPage.isDisplayNamaGuru());
     }
 
     @And("Show ulasan field")
@@ -110,7 +118,7 @@ public class PenilaianUlasanSteps {
     @Then("Ulasan field is enabled")
     public void ulasanFieldIsEnabled() {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        Assert.assertTrue(penilaianUlasanPage.isEnabledPenilaianField());
+        Assert.assertTrue(penilaianUlasanPage.isEnabledUlasanField());
     }
 
     @When("Student input \"(.*)\" in ulasan field")
@@ -159,5 +167,14 @@ public class PenilaianUlasanSteps {
     public void penilaianFieldShowAlert(String message) {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
         Assert.assertEquals(message, penilaianUlasanPage.getErrorInputPenilaian());
+    }
+
+    @When("User move to Profile Page")
+    public void userMoveToProfilePage() {
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        if(berandaPage.successMessageIsDisplayed()) {
+            berandaPage.clickButtonConfirmationSuccessMessage();
+        }
+        berandaPage.clickProfile();
     }
 }

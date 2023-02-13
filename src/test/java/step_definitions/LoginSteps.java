@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.example.pageObject.BerandaPage;
 import org.example.pageObject.LandingPage;
 import org.example.pageObject.LoginPage;
+import org.example.pageObject.ReservasiSubPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
@@ -16,6 +17,12 @@ public class LoginSteps {
     public LoginSteps(){
         super();
         this.webDriver = Hooks.webDriver;
+    }
+
+    @Given("User open the website GuruMu")
+    public void verifyDisplay(){
+        LandingPage landingPage= new LandingPage(webDriver);
+        landingPage.isDisplayButtonPilihGuruDisini();
     }
 
     @Given("User already in GuruMu login page")
@@ -62,8 +69,8 @@ public class LoginSteps {
 
     @Then("User will see \"(.*)\" in beranda page")
     public void userWillSeeSuccesAlertInBerandaPage(String succesAlert) {
-        LoginPage loginPage = new LoginPage(webDriver);
-        Assert.assertEquals(succesAlert, loginPage.getSucces());
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        Assert.assertEquals(succesAlert, berandaPage.successMessageIsDisplayed());
         //loginPage.setOkBtn();
     }
 
