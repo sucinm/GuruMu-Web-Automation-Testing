@@ -17,19 +17,11 @@ Feature: Register
     And User select "Siswa" in Peran field
     Then User click Daftar Button
     And User will see alert message "validation error"
-<<<<<<< HEAD
     Examples:
       | email           |
       | agusgmail@.com  |
       | agus@gmailcom   |
       | agus@opiqew.com |
-=======
-  Examples:
-    | email           |
-    | agusgmail@.com  |
-    | agus@gmailcom   |
-    | agus@opiqew.com |
->>>>>>> b7542ad (Fixing steps and scenario for register)
 
   @RegisterStudent
   Scenario Outline: Register Student with invalid password format
