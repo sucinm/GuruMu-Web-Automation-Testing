@@ -7,7 +7,6 @@ Feature: Cari guru
     And User click menu Masuk
     And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
 
-  @Scenario1
   Scenario: Verify 'mata pelajaran' field is displayed
     When Student click menu Beranda
     Then Should show home page
@@ -91,8 +90,8 @@ Feature: Cari guru
     And Student input "<lokasi>" as lokasi
     Then Lokasi field value is "<lokasi>"
     Examples:
-      | lokasi     |
-      | matematika |
+      | lokasi  |
+      | jakarta |
 
   Scenario Outline: Input alphabet with more than maximum allowed length on 'lokasi' field
     When Student click menu Beranda
@@ -132,8 +131,8 @@ Feature: Cari guru
     Then Should show teacher list
     And Verify teacher lokasi "<lokasi>"
     Examples:
-      | lokasi   |
-      | surabaya |
+      | lokasi  |
+      | jakarta |
 
   Scenario Outline: Students search for teachers by input special char in lokasi field
     When Student click menu Beranda
@@ -157,9 +156,9 @@ Feature: Cari guru
   Scenario: Student search for teachers by input valid mata pelajaran and valid lokasi
     When Student click menu Beranda
     And Student input "matematika" as mata pelajaran
-    And Student input "surabaya" as lokasi
+    And Student input "jakarta" as lokasi
     Then Should show teacher list
-    And Verify teacher lokasi "surabaya"
+    And Verify teacher lokasi "jakarta"
 
   Scenario: Students search for teachers without search filter
     When Student click menu Beranda

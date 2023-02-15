@@ -20,8 +20,7 @@ public class LoginSteps {
     }
 
     @Given("User open the website GuruMu")
-    public void verifyDisplay() throws InterruptedException {
-        Thread.sleep(3000);
+    public void userOpenTheWebsiteGuruMu() {
         LandingPage landingPage= new LandingPage(webDriver);
         landingPage.isDisplayButtonPilihGuruDisini();
     }
