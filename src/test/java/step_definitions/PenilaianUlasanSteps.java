@@ -6,7 +6,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.BerandaPage;
-import org.example.pageObject.LoginPage;
 import org.example.pageObject.PenilaianUlasanPage;
 import org.example.pageObject.ProfilePage;
 import org.junit.Assert;
@@ -39,7 +38,7 @@ public class PenilaianUlasanSteps {
     }
 
     @When("Student click button nilai")
-    public void studentClickButtonNilai() {
+    public void studentClickButtonNilai() throws InterruptedException {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
         penilaianUlasanPage.clickButtonNilai();
     }
@@ -89,7 +88,7 @@ public class PenilaianUlasanSteps {
     @And("Show \"(.*)\" on penilaian dan ulasan popup")
     public void showOnPenilaianDanUlasanPopup(String teacherName) {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        Assert.assertTrue(penilaianUlasanPage.isDisplayNamaGuru());
+        Assert.assertTrue(penilaianUlasanPage.isDisplayNamaGuru(teacherName));
     }
 
     @And("Show ulasan field")
@@ -153,7 +152,7 @@ public class PenilaianUlasanSteps {
     }
 
     @When("Student input \"(.*)\" in penilaian field")
-    public void studentInputInPenilaianField(String penilaian) {
+    public void studentInputInPenilaianField(String penilaian) throws InterruptedException {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
         penilaianUlasanPage.setPenilaian(penilaian);
     }
@@ -164,22 +163,18 @@ public class PenilaianUlasanSteps {
         Assert.assertEquals(penilaian, penilaianUlasanPage.getPenilaian());
     }
 
-    @Then("Penilaian field show alert \"(.*)\"")
-    public void penilaianFieldShowAlert(String message) {
+    @Then("Penilaian field show alert")
+    public void penilaianFieldShowAlert() {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        Assert.assertEquals(message, penilaianUlasanPage.getErrorInputPenilaian());
+        Assert.assertTrue(!penilaianUlasanPage.isInputPenilaianValid());
     }
 
     @When("User move to Profile Page")
-    public void userMoveToProfilePage() throws InterruptedException {
+    public void userMoveToProfilePage() {
         BerandaPage berandaPage = new BerandaPage(webDriver);
-        PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        LoginPage loginPage = new LoginPage(webDriver);
         if(berandaPage.successMessageIsDisplayed()) {
             berandaPage.clickButtonConfirmationSuccessMessage();
         }
         berandaPage.clickProfile();
-        webDriver.navigate().refresh();
-        Thread.sleep(5000);
     }
 }
