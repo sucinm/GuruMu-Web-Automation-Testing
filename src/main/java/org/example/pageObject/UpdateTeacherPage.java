@@ -29,19 +29,19 @@ public class UpdateTeacherPage {
     @FindBy(id = "input-photo")
     private WebElement inputPhoto;
 
-    @FindBy(xpath = "//div[@class='flex flex-rows  w-10/12 lg:w-8/12 mx-auto border-2 mt-5']//select[@class='select select-bordered w-11/12  bg-white']")
+    @FindBy(xpath = "//input[@class='input flex justify-center p-2 w-10/12 lg:w-6/12 mx-auto bg-white border-2 border-gray-300']")
     private WebElement specialisMapel;
 
-    @FindBy(xpath = "//select[@class='select select-bordered w-full bg-white']")
+    @FindBy(xpath = "//input[@id='input-pendidikan']")
     private WebElement jenjangPendidikan;
 
     @FindBy(id = "input-ijazah")
     private WebElement inputIjazah;
 
-    @FindBy(id = "picker-calendar")
+    @FindBy(id = "date")
     private WebElement pickerCalendar;
 
-    @FindBy(id = "picker-jam")
+    @FindBy(id = "time")
     private WebElement pickerJam;
 
     @FindBy(xpath = "//ul[@class='react-datepicker__time-list']")
@@ -63,13 +63,13 @@ public class UpdateTeacherPage {
     @FindBy(id = "input-pengalaman")
     private WebElement inputPengalaman;
 
-    @FindBy(id="select-lokasiasal")
+    @FindBy(id="input-lokasi")
     private WebElement selectLokasiasal;
 
-    @FindBy(id="input-checkbox-online")
+    @FindBy(id="input-role")
     private WebElement inputCheckboxOnline;
 
-    @FindBy(id="input-checkbox-offline")
+    @FindBy(id="input-role")
     private WebElement inputCheckboxOffline;
 
     @FindBy(id="input-handphone")
@@ -78,7 +78,7 @@ public class UpdateTeacherPage {
     @FindBy(id="input-email")
     private WebElement inputEmail;
 
-    @FindBy(id="input-inkedin")
+    @FindBy(id="input-linkedin")
     private WebElement inputLinkedin;
 
     @FindBy (id="btn-update-teacher")
@@ -89,6 +89,9 @@ public class UpdateTeacherPage {
 
     @FindBy(xpath = "//span[@class='react-datepicker__navigation-icon react-datepicker__navigation-icon--next']")
     private WebElement btnNextMonth;
+
+    @FindBy(xpath = "//div[@class='bp4-tab pl-12 pr-12 pb-2 font-bold text-xl lg:ml-60 mx-auto']")
+    private WebElement editProfile;
 
     public boolean isInputTarifEnabled(){
         return inputTarif.isEnabled();
@@ -320,4 +323,6 @@ public class UpdateTeacherPage {
     public void clickNextMonth(){
         btnNextMonth.click();
     }
+
+    public void toEditProfile() {editProfile.click();}
 }

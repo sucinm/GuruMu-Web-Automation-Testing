@@ -17,7 +17,6 @@ public class ProfilePage {
     @FindBy(id = "//div[@class='bp4-tab text-[18px] font-semibold text-slate-500 lg:px-6 px-1']")
     private WebElement navbarProfil;
 
-
     @FindBy(id = "bp4-tab-title_undefined_tab-2")
     private WebElement navbarRiwayat;
 

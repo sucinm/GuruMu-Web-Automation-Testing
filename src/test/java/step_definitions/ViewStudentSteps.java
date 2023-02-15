@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.example.pageObject.BerandaPage;
 import org.example.pageObject.ViewStudentPage;
 import org.openqa.selenium.WebDriver;
 
@@ -25,7 +26,10 @@ public class ViewStudentSteps {
 
     @When("Student click 'user' button")
     public void studentClickUserButton() {
-
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        if (berandaPage.successMessageIsDisplayed()){
+            berandaPage.clickButtonConfirmationSuccessMessage();
+        }
         viewStudentPage.userClicked();
     }
 
@@ -36,8 +40,12 @@ public class ViewStudentSteps {
     }
 
     @Then("Student click 'Profile' option")
-    public void studentClickProfileOption() {
-
+    public void studentClickProfileOption() throws InterruptedException {
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        berandaPage.clickProfile();
+        webDriver.navigate().refresh();
+        Thread.sleep(3000);
+        viewStudentPage.closeListJadwalModal();
         viewStudentPage.profilClicked();
     }
 
@@ -48,6 +56,7 @@ public class ViewStudentSteps {
     }
     @Given("Student already on User's Profile Page")
     public void studentAlreadyOnUserSProfilePage() {
+        viewStudentPage.closeListJadwalModal();
         viewStudentPage.isUserDisplayed();
         viewStudentPage.userClicked();
         viewStudentPage.isStudentNameDisplayed();
@@ -131,6 +140,9 @@ public class ViewStudentSteps {
     public void studentClickPerbaruiProfilButton() {
     }
 
-
+    @And("click 'user' button")
+    public void clickUserButton() {
+        viewStudentPage.userClicked();
+    }
 
 }

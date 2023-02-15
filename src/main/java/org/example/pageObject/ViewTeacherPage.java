@@ -22,28 +22,28 @@ public class ViewTeacherPage {
     @FindBy(id = "link-profil")
     private WebElement linkProfil;
 
-    @FindBy(id = "bp4-tab-title_undefined_1")
+    @FindBy(id = "bp4-tab-title_undefined_profil")
     private WebElement profile;
 
     @FindBy(id = "bp4-tab-title_undefined_2")
     private WebElement editProfile;
 
-    @FindBy(xpath = "//div[@class='flex flex-col w-11/12 lg:h-[30rem] items-center rounded-3xl pb-4 bg-white text-[#424242] shadow-xl']/div[1]/img[@alt='profil.webp']")
+    @FindBy(xpath = "//img[@alt='profil.webp']")
     private WebElement getProfile;
 
-    @FindBy(xpath = "//p[@class='lg:text-[36px] text-[28px] font-semibold mt-5 mb-5']")
+    @FindBy(xpath = "//p[@class='lg:text-[36px] text-[28px] font-semibold mt-5 mb-5 capitalize']")
     private WebElement teacherName;
 
-    @FindBy(xpath = "//p[@class='text-[14px]']")
+    @FindBy(xpath = "//div[@class='flex mt-2 gap-1 mb-4']")
     private WebElement teacherRating;
 
-    @FindBy(xpath = "//p[@class='font-semibold lg:text-[16px] text-[14px] pr-8 mb-5']")
+    @FindBy(xpath = "//span[@class='lg:ml-2 ml-2']")
     private WebElement tarifBelajar;
 
-    @FindBy(xpath = "//p[@class='py-1 px-2 bg-[#b3b3b3] rounded-lg']")
+    @FindBy(xpath = "//div[@class='flex text-[#637381] gap-8 text-[14px] mt-2']")
     private WebElement mataPelajaran;
 
-    @FindBy(xpath = "//p[@class='py-1 px-2 bg-[#b3b3b3]  rounded-lg']")
+    @FindBy(xpath = "//p[@class='px-5 py-3 text-lg  bg-white shadow-lg rounded-3xl mt-5']")
     private WebElement tingkatan;
 
     @FindBy(xpath = "//p[@class='px-5 py-3 text-lg  bg-white shadow-lg rounded-3xl mt-5']")
@@ -58,7 +58,7 @@ public class ViewTeacherPage {
     @FindBy(xpath = "//ul[@class='lg:text-[16px] text-[15px]']")
     private WebElement experience;
 
-    @FindBy(id = "my-modal-3")
+    @FindBy(xpath = "//p[@class='mt-5 mb-10']")
     private WebElement bacaSelengkapnya;
 
     @FindBy(xpath = "//div[@class='modal-box relative']")
@@ -66,13 +66,13 @@ public class ViewTeacherPage {
 
 
 
-    @FindBy(xpath = "//div[@class='flex gap-2 py-2 px-5 rounded-2xl lg:-mb-0 -mb-5 bg-white shadow-lg']")
+    @FindBy(xpath = "//div[@class='flex gap-2 py-2 px-5 rounded-2xl lg:-mb-0 bg-white shadow-lg']")
     private WebElement lokasiAsal;
 
     @FindBy(xpath = "//div[@class='flex gap-2 py-2 px-5 rounded-2xl bg-white shadow-lg']")
     private WebElement offline;
 
-    @FindBy(xpath = "//p[@class='mt-5 flex w-64 gap-2 py-2 px-5 rounded-2xl bg-white shadow-lg']")
+    @FindBy(xpath = "//div[@class='flex gap-2 py-2 px-5 rounded-2xl bg-white shadow-lg']")
     private WebElement online;
 
     @FindBy(xpath = "//div[@class='bg-white rounded-xl py-4 px-10 text-[16px] mb-5 pb-10 pt-10']")
@@ -81,7 +81,7 @@ public class ViewTeacherPage {
     @FindBy(xpath = "//p[@class='mt-5']")
     private WebElement lihatLebihBanyak;
 
-    @FindBy(xpath = "//div[@class='flex flex-col w-11/12 lg:h-[30rem] items-center rounded-3xl pb-4 bg-white text-[#424242] shadow-xl']")
+    @FindBy(xpath = "//button[@id='btn-cek-jadwal']")
     private WebElement cekJadwal;
 
 

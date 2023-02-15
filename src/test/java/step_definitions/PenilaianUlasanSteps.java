@@ -61,18 +61,6 @@ public class PenilaianUlasanSteps {
         profilePage.clickNavbarRiwayat();
     }
 
-//    @And("Click Riwayat and Sub menu Riwayat is active")
-//    public void subMenuRiwayatIsActive() throws InterruptedException {
-//        Thread.sleep(10000);
-//        BerandaPage berandaPage = new BerandaPage(webDriver);
-//        ProfilePage profilePage = new ProfilePage(webDriver);
-////        if(berandaPage.successMessageIsDisplayed()) {
-////            berandaPage.clickButtonConfirmationSuccessMessage();
-////        }
-//        berandaPage.clickNavigation();
-//        profilePage.clickNavbarRiwayat();
-//    }
-
     @When("Student click link ulasan in row")
     public void studentClickLinkUlasanInRowAsTeacher( ) {
         ProfilePage profilePage = new ProfilePage(webDriver);
@@ -169,8 +157,17 @@ public class PenilaianUlasanSteps {
         Assert.assertTrue(!penilaianUlasanPage.isInputPenilaianValid());
     }
 
+    @When("User move to Profile Page")
+    public void userMoveToProfilePage() {
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        if(berandaPage.successMessageIsDisplayed()) {
+            berandaPage.clickButtonConfirmationSuccessMessage();
+        }
+        berandaPage.clickProfile();
+    }
+
     @When("User move to History Murid Page")
-    public void userMoveToProfilePage() throws InterruptedException {
+    public void userMoveToHistoryMuridPage() throws InterruptedException {
         BerandaPage berandaPage = new BerandaPage(webDriver);
         if(berandaPage.successMessageIsDisplayed()) {
             berandaPage.clickButtonConfirmationSuccessMessage();

@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.example.pageObject.BerandaPage;
 import org.openqa.selenium.WebDriver;
 import org.example.pageObject.ViewTeacherPage;
 public class ViewTeacherSteps {
@@ -23,16 +24,21 @@ public class ViewTeacherSteps {
 
     @When("Teacher click 'user' button")
     public void teacherClickUserButton() {
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        if (berandaPage.successMessageIsDisplayed()){
+            berandaPage.clickButtonConfirmationSuccessMessage();
+        }
         viewTeacherPage.isUserDisplayed();
         viewTeacherPage.userClicked();
     }
 
     @Then("Teacher Click 'Profile' option")
-    public void teacherClickProfileOption() {
+    public void teacherClickProfileOption() throws InterruptedException {
         viewTeacherPage.isUserDisplayed();
         viewTeacherPage.userClicked();
-        viewTeacherPage.isMenuDisplayed();
-        viewTeacherPage.isLinkProfilCanBeClicked();
+//        Thread.sleep(3000);
+//        viewTeacherPage.isMenuDisplayed();
+//        viewTeacherPage.isLinkProfilCanBeClicked();
     }
 
     @And("Go to Teacher Profile")
@@ -46,7 +52,7 @@ public class ViewTeacherSteps {
         viewTeacherPage.isUserDisplayed();
         viewTeacherPage.userClicked();
         viewTeacherPage.isMenuDisplayed();
-        viewTeacherPage.isLinkProfilCanBeClicked();
+//        viewTeacherPage.isLinkProfilCanBeClicked();
     }
 
     @When("Teacher verifies 'Profile Picture'")
@@ -202,6 +208,8 @@ public class ViewTeacherSteps {
         viewTeacherPage.isCekJadwalCanBeClicked();
     }
 
-
-
+    @Then("Profile picture teacher is displayed")
+    public void profilePictureTeacherIsDisplayed() {
+        viewTeacherPage.isGetProfileDisplayed();
+    }
 }

@@ -1,6 +1,14 @@
 @Test
 Feature: Update Teacher
 
+  Background:
+    Given User open the website GuruMu
+    When User click avatar navigation
+    And User click menu Masuk
+    And User input "zulfeekei@gmail.com" as email and input "be123" as password
+    When User move to Profile Page
+    And User move to edit profile
+
   Scenario: Verify 'Tarif / Jam' field is enabled
     Given Teacher already on Edit Profile page
     When Teacher click 'Tarif / Jam' field
