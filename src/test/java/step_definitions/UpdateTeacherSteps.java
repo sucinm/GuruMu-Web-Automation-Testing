@@ -1188,6 +1188,25 @@ public class UpdateTeacherSteps {
         UpdateTeacherPage updateTeacherPage = new UpdateTeacherPage(webDriver);
         updateTeacherPage.clickPickerCalendar();
     }
+
+    @And("User move to edit profile")
+    public void userMoveToEditProfile() throws InterruptedException {
+        UpdateTeacherPage updateTeacherPage = new UpdateTeacherPage(webDriver);
+        updateTeacherPage.toEditProfile();
+        Thread.sleep(3000);
+    }
+
+    @Then("'Handphone' field is enabled")
+    public void handphoneFieldIsEnabled() {
+        UpdateTeacherPage updateTeacherPage = new UpdateTeacherPage(webDriver);
+        updateTeacherPage.isInputHandphoneEnabled();
+    }
+
+    @Then("'Email' field is enabled")
+    public void emailFieldIsEnabled() {
+        UpdateTeacherPage updateTeacherPage = new UpdateTeacherPage(webDriver);
+        updateTeacherPage.isInputEmailEnabled();
+    }
 }
 
 

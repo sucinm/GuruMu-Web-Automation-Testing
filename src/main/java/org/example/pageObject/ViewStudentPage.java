@@ -49,6 +49,11 @@ public class ViewStudentPage {
     @FindBy(xpath = "//label[@class='btn btn-sm btn-circle absolute right-2 top-2']")
     private WebElement modalClose;
 
+    @FindBy(xpath = "//div[@class='swal2-popup swal2-modal animate__animated animate__fadeIn animate__faster']")
+    private WebElement listJadwalModal;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement listJadwalModalBtn;
 
     public boolean isUserDisplayed(){
         return user.isDisplayed();
@@ -127,6 +132,12 @@ public class ViewStudentPage {
     }
 
     public boolean isHomeDisplayed() {
-        return profil.isDisplayed() && profilPicture.isDisplayed();
+        return user.isDisplayed();
+    }
+
+    public void closeListJadwalModal() {
+        if (listJadwalModal.isDisplayed()) {
+            listJadwalModalBtn.click();
+        }
     }
 }

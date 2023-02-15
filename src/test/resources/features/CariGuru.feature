@@ -7,7 +7,6 @@ Feature: Cari guru
     And User click menu Masuk
     And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
 
-  @Scenario1
   Scenario: Verify 'mata pelajaran' field is displayed
     When Student click menu Beranda
     Then Should show home page

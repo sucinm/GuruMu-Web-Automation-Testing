@@ -19,7 +19,7 @@ public class CariGuruSteps {
     }
 
     @And("Student input \"(.*)\" as mata pelajaran")
-    public void studentInputAsMataPelajaran(String mataPelajaran) throws InterruptedException {
+    public void studentInputAsMataPelajaran(String mataPelajaran)  {
         BerandaPage berandaPage = new BerandaPage(webDriver);
         berandaPage.setMataPelajaran(mataPelajaran);
     }
