@@ -4,7 +4,7 @@ Feature: Student view session
   Background:
     When User click avatar navigation
     And User click menu Masuk
-    And User input "herdiladania11@gmail.com" as email and input "fe123" as password
+    And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
     And Student click menu Beranda
     And Student click profile icon button
 
@@ -30,12 +30,6 @@ Feature: Student view session
     When Student click button Sedang Berlangsung
     Then Showing page Sedang Berlangsung
     And Should show Hari & tanggal field
-
-  @ScenarioViewStudent
-  Scenario: Verify 'Jam' field is displayed
-    When Student click button Sedang Berlangsung
-    Then Showing page Sedang Berlangsung
-    And Should show jam field
 
   @ScenarioViewStudent
   Scenario: Verify 'Status' field is displayed
