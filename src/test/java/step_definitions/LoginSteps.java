@@ -7,70 +7,58 @@ import cucumber.api.java.en.When;
 import org.example.pageObject.BerandaPage;
 import org.example.pageObject.LandingPage;
 import org.example.pageObject.LoginPage;
-import org.example.pageObject.ReservasiSubPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class LoginSteps {
     private WebDriver webDriver;
+    LoginPage loginPage;
 
     public LoginSteps(){
         super();
         this.webDriver = Hooks.webDriver;
-    }
-
-    @Given("User open the website GuruMu")
-    public void userOpenTheWebsiteGuruMu() {
-        LandingPage landingPage= new LandingPage(webDriver);
-        landingPage.isDisplayButtonPilihGuruDisini();
+        loginPage = new LoginPage(webDriver);
     }
 
     @Given("User already in GuruMu login page")
-    public void userAlreadyInGuruMuLoginPage() {
-        LoginPage loginPage = new LoginPage(webDriver);
+    public void userAlreadyInGuruMuLoginPage() throws InterruptedException {
         loginPage.avatarBtn();
         loginPage.isDisplayed();
+        Thread.sleep(5000);
     }
 
     @When("User input \"(.*)\" as email and input \"(.*)\" as password")
     public void inputCredential(String email, String password) throws InterruptedException {
-        LoginPage loginPage = new LoginPage(webDriver);
         loginPage.setEmail(email);
         loginPage.setPassword(password);
-        loginPage.clickLogin();
         Thread.sleep(3000);
     }
 
     @Then("User see error \"(.*)\" on login page")
     public void errorText(String errorText){
-        LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertEquals(errorText, loginPage.getErrorText());
     }
 
     @Then("User clicked masuk button")
     public void userClickMasukButton() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(webDriver);
         loginPage.clickLogin();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     @Then("User cant clicked masuk button")
     public void userCantClickedMasukButton() {
-        LoginPage loginPage = new LoginPage(webDriver);
-        loginPage.disableBtn();
+        Assert.assertFalse(loginPage.disableBtn());
     }
 
     @And("Alert pop-up will shown with message \"(.*)\"")
     public void alertPopUpWillShownWithMessage(String alertMsg) {
-        LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertEquals(alertMsg,loginPage.getAlert());
         loginPage.alertBtn();
     }
 
     @Then("User will see \"(.*)\" in beranda page")
     public void userWillSeeSuccesAlertInBerandaPage(String succesAlert) {
-        BerandaPage berandaPage = new BerandaPage(webDriver);
-        Assert.assertEquals(succesAlert, berandaPage.successMessageIsDisplayed());
+        Assert.assertEquals(succesAlert, loginPage.getSucces());
         //loginPage.setOkBtn();
     }
 

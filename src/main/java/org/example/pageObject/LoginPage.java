@@ -64,8 +64,7 @@ public class LoginPage {
     }
 
     public boolean disableBtn(){
-        btnLogin.isEnabled();
-        return false;
+        return btnLogin.isEnabled();
     }
 
     public String getAlert(){
@@ -82,5 +81,9 @@ public class LoginPage {
 
     public void setOkBtn(){
         okBtn.click();
+    }
+
+    public void refresh(){
+        driver.navigate().refresh();
     }
 }
