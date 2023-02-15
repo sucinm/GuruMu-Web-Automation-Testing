@@ -1,12 +1,14 @@
-@Login
+
 Feature: Login
   As a user i want to login to GuruMu website
 
+
   Scenario: Login user with valid email & password
     Given User already in GuruMu login page
-    When User input "qatestregisterguru1@gmail.com" as email and input "Qatestguru@123" as password
+    When User input "qatestregisterguru5@gmail.com" as email and input "Qatestguru@123" as password
     Then User clicked masuk button
     And User will see "Succes Login" in beranda page
+
 
   Scenario Outline: Login user with empty data
     Given User already in GuruMu login page
@@ -18,6 +20,7 @@ Feature: Login
       | wrongemail@gmail.com |             |
       |                      | invalidpass |
 
+
   Scenario Outline: Login user with invalid data
     Given User already in GuruMu login page
     When User input "<email>" as email and input "<password>" as password
@@ -28,3 +31,10 @@ Feature: Login
       | unregistered@gmail.com | unregister  |
       | wrongemail@gmail.com   | validpass   |
       | validemail@gmail.com   | invalidpass |
+
+  @Login
+  Scenario: Login user with valid email wrong password
+    Given User already in GuruMu login page
+    When User input "qatestregisterguru5@gmail.com" as email and input "9adnas2JIk" as password
+    Then User clicked masuk button
+    And Alert pop-up will shown with message "password tidak sesuai "

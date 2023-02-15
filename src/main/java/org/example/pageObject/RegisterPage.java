@@ -103,6 +103,11 @@ public class RegisterPage {
         jenjang.selectByValue(pilih);
     }
 
+    public void emptyJenjang (){
+        Select empty = new Select(pilihJenjang);
+        empty.selectByIndex(0);
+    }
+
     public void setDeskripsiDiri(String deskripsi){
         deskripsiDiri.sendKeys(deskripsi);
     }

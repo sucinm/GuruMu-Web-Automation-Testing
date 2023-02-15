@@ -82,4 +82,8 @@ public class LoginPage {
     public void setOkBtn(){
         okBtn.click();
     }
+
+    public void refresh(){
+        driver.navigate().refresh();
+    }
 }
