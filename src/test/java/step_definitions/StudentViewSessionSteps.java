@@ -84,4 +84,47 @@ public class StudentViewSessionSteps
         StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
         Assert.assertTrue(studentViewSessionPage.isDisplayTextGMeetLink());
     }
+
+    @When("Student click button Riwayat")
+    public void studentClickButtonRiwayat() throws InterruptedException
+    {
+        StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
+        studentViewSessionPage.clickBtnRiwayatSiswa();
+        Thread.sleep(3000);
+    }
+
+    @Then("Showing page Riwayat")
+    public void showingPageRiwayat()
+    {
+        StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
+        Assert.assertTrue(studentViewSessionPage.isDisplayBtnRiwayatSiswa());
+    }
+
+    @And("Should show nama guru field in riwayat page")
+    public void shouldShowNamaGuruFieldInRiwayatPage()
+    {
+        StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
+        Assert.assertTrue(studentViewSessionPage.isDisplayTextNamaGuruRiwayat());
+    }
+
+    @And("Should show jam field in riwayat page")
+    public void shouldShowJamFieldInRiwayatPage()
+    {
+        StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
+        Assert.assertTrue(studentViewSessionPage.isDisplayTextJamRiwayatStudent());
+    }
+
+    @And("Should show Hari & tanggal field in riwayat page")
+    public void shouldShowHariTanggalFieldInRiwayatPage()
+    {
+        StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
+        Assert.assertTrue(studentViewSessionPage.isDisplayTextTanggalRiwayat());
+    }
+
+    @And("Should show status field in riwayat page")
+    public void shouldShowStatusFieldInRiwayatPage()
+    {
+        StudentViewSessionPage studentViewSessionPage = new StudentViewSessionPage(webDriver);
+        Assert.assertTrue(studentViewSessionPage.isDisplayTextTStatusRiwayat());
+    }
 }
