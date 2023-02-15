@@ -15,6 +15,9 @@ public class BerandaPage {
         this.driver = driver;
     }
 
+    @FindBy(id = "btn-tarifperjam")
+    private WebElement selectGuru;
+
     @FindBy(id = "input-pencarianMapel")
     private WebElement inputMataPelajaran;
 
@@ -58,7 +61,9 @@ public class BerandaPage {
     @FindBy(id = "link-histori-sesi-murid")
     private  WebElement buttonHistoryMurid;
 
-
+    public void clickGuru(){
+        selectGuru.click();
+    }
     public void setMataPelajaran(String mataPelajaran) {
         inputMataPelajaran.sendKeys(mataPelajaran);
     }

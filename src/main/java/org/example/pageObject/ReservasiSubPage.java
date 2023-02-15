@@ -26,13 +26,13 @@ public class ReservasiSubPage {
     @FindBy(id = "")
     private WebElement textPerkenalkanDiri;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-tentang-saya")
     private WebElement textOpsional;
 
     @FindBy(id = "")
     private WebElement perkenalkanDiriField;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//select[@class='select select-bordered w-11/12  mt-5 border-2  font-poppins font-normal text-lg h-[3rem] p-2']")
     private WebElement textFormatKursus;
 
     @FindBy(id = "")
@@ -41,19 +41,19 @@ public class ReservasiSubPage {
     @FindBy(id = "")
     private WebElement onlineButton;
 
-    @FindBy(id = "")
+    @FindBy(css = "")
     private WebElement textTanggalKursusPertama;
 
     @FindBy(id = "")
     private WebElement tanggalField;
 
-    @FindBy(id = "")
+    @FindBy(css = ".mr-5")
     private WebElement pilihTanggalButton;
 
     @FindBy(id = "")
     private WebElement tanggalButton;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//select[@class='flex-1 border-2  font-poppins font-normal text-lg h-[3rem] p-2']")
     private WebElement pilihJamField;
 
     @FindBy(id = "")
@@ -74,10 +74,10 @@ public class ReservasiSubPage {
     @FindBy(id = "")
     private WebElement textAlamat;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-alamat_siswa")
     private WebElement alamatField;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-telepon")
     private WebElement textNoHp;
 
     @FindBy(id = "")
@@ -110,7 +110,7 @@ public class ReservasiSubPage {
     @FindBy(id = "")
     private WebElement textResponPesanGuru;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//select[@class='select select-bordered w-8/12 mt-5 border-2  font-poppins font-normal text-lg h-[3rem] p-2']")
     private WebElement textPilihMetodePembayaran;
 
     @FindBy(id = "")
@@ -119,7 +119,7 @@ public class ReservasiSubPage {
     @FindBy(id = "")
     private WebElement textNamaBankTransfer;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//div[@class='modal-box w-11/12 max-w-5xl relative']/label[@class='btn btn-sm btn-circle absolute right-2 top-2']")
     private WebElement xButton;
 
     public boolean isDisplayReservasiSubPage() {
@@ -153,6 +153,38 @@ public class ReservasiSubPage {
     public void clickXButton() {
         xButton.click();
     }
+
+    public boolean isDisplayXButton(){
+        return xButton.isDisplayed();
+    }
+
+    public boolean isDisplayFormatKhusus(){
+        return textFormatKursus.isDisplayed();
+    }
+
+    public boolean isDisplayTextOptional(){
+        return textOpsional.isDisplayed();
+    }
+
+    public boolean isDisplayTanggal(){
+        return pilihTanggalButton.isDisplayed();
+    }
+    public boolean isDisplayJam(){
+        return pilihJamField.isDisplayed();
+    }
+
+    public boolean isDisplayAlamat(){
+        return alamatField.isDisplayed();
+    }
+
+    public boolean isDisplayNoHP(){
+        return textNoHp.isDisplayed();
+    }
+
+    public boolean isDisplayMetodePembayaran(){
+        return textPilihMetodePembayaran.isDisplayed();
+    }
+
 
 //on progress
 }

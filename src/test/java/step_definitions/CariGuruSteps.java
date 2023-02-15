@@ -50,7 +50,8 @@ public class CariGuruSteps {
 
     //     BerandaPage Verify & Validation
     @When("Student click menu Beranda")
-    public void studentClickMenuBeranda() {
+    public void studentClickMenuBeranda() throws InterruptedException {
+        Thread.sleep(3000);
         BerandaPage berandaPage = new BerandaPage(webDriver);
         if(berandaPage.successMessageIsDisplayed()) {
             berandaPage.clickButtonConfirmationSuccessMessage();

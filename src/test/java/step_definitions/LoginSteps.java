@@ -27,6 +27,13 @@ public class LoginSteps {
         Thread.sleep(5000);
     }
 
+    @Given("User open the website GuruMu")
+    public void userOpenTheWebsiteGuruMu() throws InterruptedException {
+        LandingPage landingPage = new LandingPage(webDriver);
+        Thread.sleep(3000);
+        landingPage.isDisplayListTahapanGuruMu();
+    }
+
     @When("User input \"(.*)\" as email and input \"(.*)\" as password")
     public void inputCredential(String email, String password) throws InterruptedException {
         loginPage.setEmail(email);
