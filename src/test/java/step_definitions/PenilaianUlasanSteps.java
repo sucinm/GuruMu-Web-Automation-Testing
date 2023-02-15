@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.example.pageObject.BerandaPage;
+import org.example.pageObject.LoginPage;
 import org.example.pageObject.PenilaianUlasanPage;
 import org.example.pageObject.ProfilePage;
 import org.junit.Assert;
@@ -170,11 +171,15 @@ public class PenilaianUlasanSteps {
     }
 
     @When("User move to Profile Page")
-    public void userMoveToProfilePage() {
+    public void userMoveToProfilePage() throws InterruptedException {
         BerandaPage berandaPage = new BerandaPage(webDriver);
+        PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
+        LoginPage loginPage = new LoginPage(webDriver);
         if(berandaPage.successMessageIsDisplayed()) {
             berandaPage.clickButtonConfirmationSuccessMessage();
         }
         berandaPage.clickProfile();
+        webDriver.navigate().refresh();
+        Thread.sleep(5000);
     }
 }

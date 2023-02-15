@@ -5,7 +5,7 @@ Feature: Penilaian Ulasan
     Given User open the website GuruMu
     When User click avatar navigation
     And User click menu Masuk
-    And User input "FE@alta.id" as email and input "fe123" as password
+    And User input "herdiladania11@gmail.com" as email and input "fe123" as password
     When User move to Profile Page
     And Click Riwayat and Sub menu Riwayat is active
 

@@ -11,7 +11,7 @@ public class Hooks {
 
     @Before // yang dilakukan sebelum menjalankan test (import cucumber.api.java.Before)
     public void openBrowser(){
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+  "/driver/chromedriver");
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+  "/driver/chromedriver.exe");
 
         webDriver = new ChromeDriver();
         String appUrl = "https://guru-mu.vercel.app/";

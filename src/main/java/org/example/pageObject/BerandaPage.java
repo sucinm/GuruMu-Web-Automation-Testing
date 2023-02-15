@@ -101,7 +101,7 @@ public class BerandaPage {
         inputLokasi.click();
     }
 
-    public void clickProfile(){
+    public void clickProfile() throws InterruptedException {
         navbar.click();
         navbarProfile.click();
     }

@@ -35,6 +35,9 @@ public class UpdateStudentPage {
     @FindBy(id = "btn-perbarui")
     private WebElement btnPerbarui;
 
+    @FindBy(id = "modal-profil-murid")
+    private WebElement modalProfilMurid;
+
     public boolean isInputPictureEnabled() {
         return inputPicture.isEnabled();
     }
@@ -98,6 +101,8 @@ public class UpdateStudentPage {
         btnPerbarui.click();
     }
 
-
+    public void openEditProfileModal() {
+        modalProfilMurid.click();
+    }
 
 }

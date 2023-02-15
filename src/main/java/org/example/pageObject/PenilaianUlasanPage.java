@@ -40,6 +40,12 @@ public class PenilaianUlasanPage {
     @FindBy(id = "")
     private WebElement errorMessageInputPenilaian;
 
+    @FindBy(xpath = "//h1[@class='text-navy text-center text-xl lg:text-3xl font-bold mb-5']")
+    private WebElement finishProfileModal;
+
+    @FindBy(css = ".top-0")
+    private WebElement closeFinishProfileModalBtn;
+
     public void setUlasan(String ulasan) {
         inputUlasan.sendKeys(ulasan);
     }
@@ -80,6 +86,9 @@ public class PenilaianUlasanPage {
         return displayErrorMessage.isDisplayed();
     }
 
+    public boolean isFinishProfileMessage() {return finishProfileModal.isDisplayed();}
+
+    public void clickFinishProfileModal() {closeFinishProfileModalBtn.click();}
 
     public void clickUlasanField() {
         inputUlasan.click();
