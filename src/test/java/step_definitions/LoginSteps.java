@@ -20,11 +20,10 @@ public class LoginSteps {
     }
 
     @Given("User open the website GuruMu")
-    public void verifyDisplay(){
-        LandingPage landingPage= new LandingPage(webDriver);
-        landingPage.isDisplayButtonPilihGuruDisini();
+    public void userOpenTheWebsiteGuruMu() {
+        LandingPage landingPage = new LandingPage(webDriver);
+        landingPage.isDisplayListTahapanGuruMu();
     }
-
     @Given("User already in GuruMu login page")
     public void userAlreadyInGuruMuLoginPage() {
         LoginPage loginPage = new LoginPage(webDriver);
@@ -38,7 +37,6 @@ public class LoginSteps {
         loginPage.setEmail(email);
         loginPage.setPassword(password);
         loginPage.clickLogin();
-        Thread.sleep(3000);
     }
 
     @Then("User see error \"(.*)\" on login page")

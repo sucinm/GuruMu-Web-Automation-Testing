@@ -1,5 +1,7 @@
 package org.example.pageObject;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +15,7 @@ public class PenilaianUlasanPage {
         this.driver = driver;
     }
 
-    @FindBy(css = ".text-center")
+    @FindBy(xpath = "//h1[.='Penilaian & ulasan']")
     private WebElement displayPenilaianUlasanPage;
 
     @FindBy(xpath = "//p[@class='font-semibold pt-8 lg:pt-0 text-xl']")
@@ -40,6 +42,12 @@ public class PenilaianUlasanPage {
     @FindBy(id = "")
     private WebElement errorMessageInputPenilaian;
 
+    @FindBy(id = "swal2-html-container")
+    private WebElement successMessage;
+
+    @FindBy(css = ".flex-col")
+    private WebElement formPenilaianUlasan;
+
     public void setUlasan(String ulasan) {
         inputUlasan.sendKeys(ulasan);
     }
@@ -52,12 +60,20 @@ public class PenilaianUlasanPage {
         buttonNilai.click();
     }
 
+    public boolean isEnableButtonNilai(){
+        return buttonNilai.isEnabled();
+    }
+
     public boolean isDisplayPenilaianUlasanPage() {
         return displayPenilaianUlasanPage.isDisplayed();
     }
 
     public boolean isDisplayNamaGuru() {
         return displayNamaGuru.isDisplayed();
+    }
+
+    public boolean isDisplayNamaGuru(String teacherName) {
+        return formPenilaianUlasan.findElement(By.xpath("//p[.='"+ teacherName +"']")).isDisplayed();
     }
 
     public boolean isDisplayInputUlasan() {
@@ -98,18 +114,25 @@ public class PenilaianUlasanPage {
     }
 
     public String getUlasan() {
-        return inputUlasan.getText();
+        return inputUlasan.getAttribute("value");
     }
 
     public String getPenilaian() {
-        return inputPenilaian.getText();
+        return inputPenilaian.getAttribute("value");
     }
 
     public String getErrorInputUlasan() {
         return errorMessageInputUlasan.getText();
     }
 
-    public String getErrorInputPenilaian() {
-        return errorMessageInputPenilaian.getText();
+    public boolean isInputPenilaianValid() {
+        boolean isValid = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].validity.valid;", inputPenilaian);
+        return isValid;
     }
+
+    public String getSuccessMessage(){
+        return successMessage.getText();
+    }
+
+
 }

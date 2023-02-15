@@ -17,7 +17,8 @@ public class ProfilePage {
     @FindBy(id = "//div[@class='bp4-tab text-[18px] font-semibold text-slate-500 lg:px-6 px-1']")
     private WebElement navbarProfil;
 
-    @FindBy(xpath = "//div[@class='bp4-tab  text-center font-semibold text-lg text-slate-500 mt-2 pl-0 lg:pl-8 lg:pr-8 lg:-ml-0 -ml-2']")
+
+    @FindBy(id = "bp4-tab-title_undefined_tab-2")
     private WebElement navbarRiwayat;
 
     @FindBy(xpath = "//div[.='Sedang Berlangsung']")
@@ -32,7 +33,7 @@ public class ProfilePage {
     @FindBy(id = "")
     private WebElement titleSedangBerlangsung;
 
-    @FindBy(id = "//td[@class='flex items-center text-component text-[16px] gap-1']")
+    @FindBy(css = ".text-component")
     private WebElement linkTeacherNameForRating;
 
     public boolean isDisplayNavbarProfil() {
@@ -43,7 +44,11 @@ public class ProfilePage {
         navbarRiwayat.click();
     }
 
-    public void clickUlasanLinkByTeacher(String teacherName) {
+    public boolean isActiveNavbarRiwayat() {
+        return navbarRiwayat.getAttribute("aria-selected").equals("true");
+    }
+
+    public void clickUlasanLinkByTeacher() {
         linkTeacherNameForRating.click();
     }
 }

@@ -24,7 +24,7 @@ public class BerandaPage {
     @FindBy(css = ".pt-0")
     private WebElement buttonIconCari;
 
-    @FindBy(css = ".dropdown")
+    @FindBy(xpath = "//div[@class='dropdown dropdown-end']/label[@class='btn btn-ghost btn-circle avatar']")
     private WebElement navbar;
 
     @FindBy(xpath = "//a[.='Home']")
@@ -55,6 +55,8 @@ public class BerandaPage {
     @FindBy(css = ".swal2-confirm")
     private WebElement buttonConfirmSuccessMessage;
 
+    @FindBy(id = "link-histori-sesi-murid")
+    private  WebElement buttonHistoryMurid;
 
 
     public void setMataPelajaran(String mataPelajaran) {
@@ -97,17 +99,19 @@ public class BerandaPage {
         inputMataPelajaran.click();
     }
 
+    public void clickButtonHistoryMurid(){
+        buttonHistoryMurid.click();
+    }
     public void clickInputLokasi(){
         inputLokasi.click();
     }
 
-    public void clickProfile(){
-        navbar.click();
-        navbarProfile.click();
-    }
-
     public void clickButtonConfirmationSuccessMessage(){
         buttonConfirmSuccessMessage.click();
+    }
+
+    public void clickProfile(){
+        navbarProfile.click();
     }
     public boolean isInputMataPelajaranEnabled(){
         return inputMataPelajaran.isEnabled();
@@ -158,4 +162,10 @@ public class BerandaPage {
     public boolean successMessageIsDisplayed(){
         return successMessage.isDisplayed();
     }
+
+    public String successMessage(){
+        return successMessage.getText();
+    }
+
+
 }
