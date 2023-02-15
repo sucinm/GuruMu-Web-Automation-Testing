@@ -31,7 +31,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[@id='btn-auth']")
     private WebElement dropDownAvatar;
 
-    @FindBy(xpath = "//h2[@class='swal2-title']")
+    @FindBy(css = ".swal2-title")
     private WebElement succesLogin;
 
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")

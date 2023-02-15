@@ -20,7 +20,7 @@ public class LoginSteps {
     }
 
     @Given("User open the website GuruMu")
-    public void verifyDisplay(){
+    public void userOpenTheWebsiteGuruMu() {
         LandingPage landingPage= new LandingPage(webDriver);
         landingPage.isDisplayButtonPilihGuruDisini();
     }

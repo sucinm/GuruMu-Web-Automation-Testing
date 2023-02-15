@@ -38,7 +38,7 @@ public class PenilaianUlasanSteps {
     }
 
     @When("Student click button nilai")
-    public void studentClickButtonNilai() {
+    public void studentClickButtonNilai() throws InterruptedException {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
         penilaianUlasanPage.clickButtonNilai();
     }
@@ -61,22 +61,10 @@ public class PenilaianUlasanSteps {
         profilePage.clickNavbarRiwayat();
     }
 
-    @And("Click Riwayat and Sub menu Riwayat is active")
-    public void subMenuRiwayatIsActive() throws InterruptedException {
-        Thread.sleep(10000);
-        BerandaPage berandaPage = new BerandaPage(webDriver);
+    @When("Student click link ulasan in row")
+    public void studentClickLinkUlasanInRowAsTeacher( ) {
         ProfilePage profilePage = new ProfilePage(webDriver);
-//        if(berandaPage.successMessageIsDisplayed()) {
-//            berandaPage.clickButtonConfirmationSuccessMessage();
-//        }
-        berandaPage.clickNavigation();
-        profilePage.clickNavbarRiwayat();
-    }
-
-    @When("Student click link ulasan in row \"(.*)\" as teacher")
-    public void studentClickLinkUlasanInRowAsTeacher(String teacherName) {
-        ProfilePage profilePage = new ProfilePage(webDriver);
-        profilePage.clickUlasanLinkByTeacher(teacherName);
+        profilePage.clickUlasanLinkByTeacher();
     }
 
     @Then("Show penilaian dan ulasan popup")
@@ -88,7 +76,7 @@ public class PenilaianUlasanSteps {
     @And("Show \"(.*)\" on penilaian dan ulasan popup")
     public void showOnPenilaianDanUlasanPopup(String teacherName) {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        Assert.assertTrue(penilaianUlasanPage.isDisplayNamaGuru());
+        Assert.assertTrue(penilaianUlasanPage.isDisplayNamaGuru(teacherName));
     }
 
     @And("Show ulasan field")
@@ -152,7 +140,7 @@ public class PenilaianUlasanSteps {
     }
 
     @When("Student input \"(.*)\" in penilaian field")
-    public void studentInputInPenilaianField(String penilaian) {
+    public void studentInputInPenilaianField(String penilaian) throws InterruptedException {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
         penilaianUlasanPage.setPenilaian(penilaian);
     }
@@ -163,10 +151,10 @@ public class PenilaianUlasanSteps {
         Assert.assertEquals(penilaian, penilaianUlasanPage.getPenilaian());
     }
 
-    @Then("Penilaian field show alert \"(.*)\"")
-    public void penilaianFieldShowAlert(String message) {
+    @Then("Penilaian field show alert")
+    public void penilaianFieldShowAlert() {
         PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
-        Assert.assertEquals(message, penilaianUlasanPage.getErrorInputPenilaian());
+        Assert.assertTrue(!penilaianUlasanPage.isInputPenilaianValid());
     }
 
     @When("User move to Profile Page")
@@ -176,5 +164,47 @@ public class PenilaianUlasanSteps {
             berandaPage.clickButtonConfirmationSuccessMessage();
         }
         berandaPage.clickProfile();
+    }
+
+    @When("User move to History Murid Page")
+    public void userMoveToHistoryMuridPage() throws InterruptedException {
+        BerandaPage berandaPage = new BerandaPage(webDriver);
+        if(berandaPage.successMessageIsDisplayed()) {
+            berandaPage.clickButtonConfirmationSuccessMessage();
+        }
+
+        berandaPage.clickButtonHistoryMurid();
+    }
+
+    @And("Student click Riwayat submenu")
+    public void studentClickRiwayatSubmenu() throws InterruptedException {
+        ProfilePage profilePage = new ProfilePage(webDriver);
+        webDriver.navigate().refresh();
+        profilePage.clickNavbarRiwayat();
+    }
+
+    @Then("Button nilai is disabled")
+    public void buttonNilaiIsDisabled() {
+        PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
+        Assert.assertTrue(!penilaianUlasanPage.isEnableButtonNilai());
+    }
+
+    @And("Sub menu Riwayat is active")
+    public void subMenuRiwayatIsActive() {
+        ProfilePage profilePage = new ProfilePage(webDriver);
+        Assert.assertTrue(profilePage.isActiveNavbarRiwayat());
+    }
+
+    @Then("Student will see \"(.*)\" in beranda page")
+    public void studentWillSeeInBerandaPage(String message) throws InterruptedException {
+        PenilaianUlasanPage penilaianUlasanPage = new PenilaianUlasanPage(webDriver);
+        Thread.sleep(10000);
+        Assert.assertEquals(message, penilaianUlasanPage.getSuccessMessage());
+    }
+
+    @Then("Student will see alert \"(.*)\" in beranda page")
+    public void studentWillSeeAlertInBerandaPage(String message) throws InterruptedException {
+        String alert = webDriver.switchTo().alert().getText();
+        Assert.assertEquals(message, alert);
     }
 }

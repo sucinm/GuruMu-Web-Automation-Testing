@@ -1,48 +1,33 @@
-@Test
+@PenilaianUlasan @Test
 Feature: Penilaian Ulasan
 
   Background:
     Given User open the website GuruMu
     When User click avatar navigation
     And User click menu Masuk
-    And User input "FE@alta.id" as email and input "fe123" as password
-    When User move to Profile Page
-    And Click Riwayat and Sub menu Riwayat is active
+    And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
+    When User move to History Murid Page
+    And Student click Riwayat submenu
+    And Sub menu Riwayat is active
+    When Student click link ulasan in row
+    Then Show penilaian dan ulasan popup
 
   Scenario Outline: Verify teacher name is displayed
-    When Student click link ulasan in row "<nama_guru>" as teacher
-    Then Show penilaian dan ulasan popup
-    And Show "<nama_guru>" on penilaian dan ulasan popup
+    Then Show "<nama_guru>" on penilaian dan ulasan popup
     Examples:
-      | nama_guru    |
-      | AdiBackend 1 |
+      | nama_guru               |
+      | Suci Nascaisar Maharani |
 
-  Scenario Outline: Verify 'ulasan' field is displayed
-    When Student click link ulasan in row "<nama_guru>" as teacher
-    Then Show penilaian dan ulasan popup
-    And Show ulasan field
-    Examples:
-      | nama_guru    |
-      | AdiBackend 1 |
+  Scenario: Verify 'ulasan' field is displayed
+    Then Show ulasan field
 
-  Scenario Outline: Verify 'penilaian' field is displayed
-    When Student click link ulasan in row "<nama_guru>" as teacher
-    Then Show penilaian dan ulasan popup
-    And Show penilaian field
-    Examples:
-      | nama_guru    |
-      | AdiBackend 1 |
+  Scenario: Verify 'penilaian' field is displayed
+    Then Show penilaian field
 
-  Scenario Outline: Verify 'nilai' button is displayed
-    When Student click link ulasan in row "<nama_guru>" as teacher
-    Then Show penilaian dan ulasan popup
-    And Show nilai button
-    Examples:
-      | nama_guru    |
-      | AdiBackend 1 |
+  Scenario: Verify 'nilai' button is displayed
+    Then Show nilai button
 
   Scenario: Verify 'ulasan' field is enabled
-    When Student click ulasan field
     Then Ulasan field is enabled
 
   Scenario Outline: Input special character in 'ulasan' field
@@ -68,10 +53,10 @@ Feature: Penilaian Ulasan
 
   Scenario Outline: Input alphabet with more than maximum allowed length on 'ulasan' field
     When Student input "<ulasan>" in ulasan field
-    Then Ulasan field show alert "Maximal char 250"
+    Then Ulasan field show alert "Maximal char 300"
     Examples:
-      | ulasan                                                                                                                                                                                                                                                                                |
-      | Abcsdsdadsdadsadsdsadasdasdasdasdasdasdasdsdasdasdasdasdasdasdasdasdasdasdasdasdasdssdsdsdsdsdadasdadasdasjdbasjkdhasjdkhasjkdgasjhfgkasjhfgahjsfgadhjsfgahjsfgashjfgasjhfgasjkfasgjhadfgasfsgkfgjhasgfasdfsdfsdfjdsgfdshjfgdshfgdshfgdshjfgaskyfgqewyurteqwiufgadsufyewuifhdsjkfhekf |
+      | ulasan                                                                                                                                                                                                                                                                                                          |
+      | Abcsdsdadsdadsadsdsadasdasdasdasdasdasdasdsdasdasdasdasdasdasdasdasdasdasdasdasdasdssdsdsdsdsdadasdadasdasjdbasjkdhasjdkhasjkdgasjhfgkasjhfgahjsfgadhjsfgahjsfgashjfgasjhfgasjkfasgjhadfgasfsgkfgjhasgfasdfsdfsdfjdsgfdshjfgdshfgdshfgdshjfgaskyfgqewyurteqwiufgadsufyewuifhdsjkfhekfdfsdfdsfssdfsdfsdsazxasasds |
 
   Scenario: Verify 'penilaian' field is enabled
     When Student click penilaian field
@@ -79,7 +64,7 @@ Feature: Penilaian Ulasan
 
   Scenario Outline: Input special character in 'penilaian' field
     When Student input "<penilaian>" in penilaian field
-    Then Penilaian field value is "0"
+    Then Penilaian field value is ""
     Examples:
       | penilaian |
       | #@#@      |
@@ -93,58 +78,59 @@ Feature: Penilaian Ulasan
 
   Scenario Outline: Input alphabet in 'penilaian' field
     When Student input "<penilaian>" in penilaian field
-    Then Penilaian field value is "0"
+    Then Penilaian field value is ""
     Examples:
       | penilaian |
       | keren     |
 
   Scenario Outline: Input number with more than maximum allowed length on 'penilaian' field
     When Student input "<penilaian>" in penilaian field
-    Then Penilaian field show alert "Maximal number is 5"
+    And Student click button nilai
+    Then Penilaian field show alert
     Examples:
       | penilaian |
       | 12121     |
 
   Scenario Outline: Input alphabet with less than minimum allowed length on 'penilaian' field
     When Student input "<penilaian>" in penilaian field
-    Then Penilaian field show alert "Minimal number is 1"
+    And Student click button nilai
+    Then Penilaian field show alert
     Examples:
       | penilaian |
       | 0         |
 
 #  Penilaian & Ulasan Functionality
-  Scenario Outline: Search with input number in 'ulasan' field and 'penilaian' field
-    Given Student input "<ulasan>" as ulasan
+  Scenario Outline: Rating & review with input number in 'ulasan' field and 'penilaian' field
+    When Student input "<ulasan>" as ulasan
     And Student input "<penilaian>" as penilaian
-    When Student click button nilai
-    Then Show success message "Berhasil"
+    And Student click button nilai
+    Then User will see "Succes" in beranda page
     Examples:
       | ulasan | penilaian |
-      | 1      | 1         |
+      | 1      | 5         |
 
-  Scenario Outline: Search with input special character in 'ulasan' field and input number in 'penilaian' field
-    Given Student input "<ulasan>" as ulasan
+  Scenario Outline: Rating & review with input special character in 'ulasan' field and input number in 'penilaian' field
+    When Student input "<ulasan>" as ulasan
     And Student input "<penilaian>" as penilaian
-    When Student click button nilai
-    Then Show success message "Berhasil"
+    And Student click button nilai
+    Then Student will see alert "input tidak valid" in beranda page
     Examples:
       | ulasan | penilaian |
-      | @#@$   | 1         |
+      | @#@$   | 5         |
 
-  Scenario Outline: Search with input alphabet in 'ulasan' field and input number in 'penilaian' field
-    Given Student input "<ulasan>" as ulasan
+  Scenario Outline: Rating & review with input alphabet in 'ulasan' field and input number in 'penilaian' field
+    When Student input "<ulasan>" as ulasan
     And Student input "<penilaian>" as penilaian
-    When Student click button nilai
-    Then Show success message "Berhasil"
+    And Student click button nilai
+    Then Student will see "berhasil menambahkan ulasan" in beranda page
     Examples:
       | ulasan | penilaian |
-      | keren  | 1         |
+      | keren  | 5         |
 
-  Scenario Outline: Search with input alphabet in 'ulasan' field and input alphabet in 'penilaian' field
-    Given Student input "<ulasan>" as ulasan
+  Scenario Outline: Rating & review with input alphabet in 'ulasan' field and input alphabet in 'penilaian' field
+    When Student input "<ulasan>" as ulasan
     And Student input "<penilaian>" as penilaian
-    When Student click button nilai
-    Then Show success message "Berhasil"
+    Then Button nilai is disabled
     Examples:
       | ulasan | penilaian |
       | keren  | lima      |

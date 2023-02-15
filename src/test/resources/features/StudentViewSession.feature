@@ -32,6 +32,13 @@ Feature: Student view session
     And Should show Hari & tanggal field
 
   @ScenarioViewStudent
+  Scenario: Verify 'Jam' field is displayed
+    When Student click button Sedang Berlangsung
+    Then Showing page Sedang Berlangsung
+    And Should show jam field
+
+  @ScenarioViewStudent
+
   Scenario: Verify 'Status' field is displayed
     When Student click button Sedang Berlangsung
     Then Showing page Sedang Berlangsung
