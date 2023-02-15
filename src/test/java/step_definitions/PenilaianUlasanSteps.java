@@ -158,12 +158,14 @@ public class PenilaianUlasanSteps {
     }
 
     @When("User move to Profile Page")
-    public void userMoveToProfilePage() {
+    public void userMoveToProfilePage() throws InterruptedException {
         BerandaPage berandaPage = new BerandaPage(webDriver);
         if(berandaPage.successMessageIsDisplayed()) {
             berandaPage.clickButtonConfirmationSuccessMessage();
         }
         berandaPage.clickProfile();
+        webDriver.navigate().refresh();
+        Thread.sleep(5000);
     }
 
     @When("User move to History Murid Page")
@@ -174,6 +176,7 @@ public class PenilaianUlasanSteps {
         }
 
         berandaPage.clickButtonHistoryMurid();
+
     }
 
     @And("Student click Riwayat submenu")

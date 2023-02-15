@@ -1,4 +1,4 @@
-@Test
+@TestViewStudent
 Feature: View Student
 
   Background:
@@ -17,59 +17,59 @@ Feature: View Student
     And Go to Student Profile
 
   Scenario: Verify 'Profile Picture' is Displayed
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student verifies 'Profile Picture'
-    Then Profile picture is displayed
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student verifies 'Profile Picture'
+    And Profile picture is displayed
 
   Scenario: Verify 'Name' is Displayed
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student verifies 'Name'
-    Then Name is displayed
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student verifies 'Name'
+    And Name is displayed
 
   Scenario: Verify 'Email' is Displayed
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student verifies 'Email'
-    Then Email is displayed
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student verifies 'Email'
+    And Email is displayed
 
   Scenario: Verify 'Handphone' is Displayed\
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student verifies 'Handphone'
-    Then Handphone is displayed
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student verifies 'Handphone'
+    And Handphone is displayed
 
   Scenario: Verify 'Alamat' is Displayed
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student verifies 'Alamat'
-    Then Alamat is displayed
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student verifies 'Alamat'
+    And Alamat is displayed
 
   Scenario: Verify 'Profile' button is enabled
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student click 'Profile' button
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student click 'Profile' button
     Then button is enabled
     And Show Profile sidebar
 
   Scenario: Verify 'Riwayat' button is enabled
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student click 'Riwayat' button
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student click 'Riwayat' button
     Then button is enabled
     And Show Riwayat sidebar
 
   Scenario: Verify 'Sedang Berlangsung' button is enabled
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student click 'Sedang Berlangsung' button
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student click 'Sedang Berlangsung' button
     Then button is enabled
     And Show Sedang Berlangsung sidebar
 
   Scenario: Verify 'Perbarui Profil' button is enabled
-    When User move to Profile Page
-    Given Student already on User's Profile Page
-    When Student click 'Perbarui Profil' button
-    Then button is enabled
+    Given User move to Profile Page
+    When Student already on User's Profile Page
+    Then Student click 'Perbarui Profil' button
+    And button is enabled
 

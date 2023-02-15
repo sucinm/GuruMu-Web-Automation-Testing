@@ -111,6 +111,7 @@ public class BerandaPage {
     }
 
     public void clickProfile(){
+        navbar.click();
         navbarProfile.click();
     }
     public boolean isInputMataPelajaranEnabled(){

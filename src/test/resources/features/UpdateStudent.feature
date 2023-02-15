@@ -1,4 +1,4 @@
-@Test
+@TestUpdateStudent
 Feature: Update Student
 
   Background:

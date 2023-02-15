@@ -1,4 +1,4 @@
-@Test
+@TestUpdateTeacher
 Feature: Update Teacher
 
   Background:
