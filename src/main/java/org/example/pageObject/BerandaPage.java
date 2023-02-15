@@ -24,7 +24,7 @@ public class BerandaPage {
     @FindBy(css = ".pt-0")
     private WebElement buttonIconCari;
 
-    @FindBy(xpath = "//div[@class='dropdown dropdown-end']/label[@class='btn btn-ghost btn-circle avatar']")
+    @FindBy(css = ".dropdown")
     private WebElement navbar;
 
     @FindBy(xpath = "//a[.='Home']")
@@ -99,6 +99,11 @@ public class BerandaPage {
 
     public void clickInputLokasi(){
         inputLokasi.click();
+    }
+
+    public void clickProfile() throws InterruptedException {
+        navbar.click();
+        navbarProfile.click();
     }
 
     public void clickButtonConfirmationSuccessMessage(){

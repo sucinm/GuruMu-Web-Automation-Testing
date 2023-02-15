@@ -1,23 +1,23 @@
+@Login
+Feature: Login
+  As a user i want to login to GuruMu website
 
-  Feature: Login
-    As a user i want to login to website sauce demo
+  Scenario: Login user with valid email & password
+    Given User already in GuruMu login page
+    When User input "fikri@gmail.com" as email and input "password12" as password
+    Then User will see "Succes Login" in beranda page
 
-    @TestClick
-    Scenario: User click navigation
-      Given User open the website GuruMu
-      When User click avatar navigation
-  @Login
-  Scenario: Normal login
-    Given User open the website GuruMu
-    When User click menu Masuk
-    And User input "suci@gmail.com" as email and input "12345" as password
-    Then User show popup message
+  Scenario: Login user with empty data
+    Given User already in GuruMu login page
+    When User input "" as email and input "" as password
+    Then User cant clicked masuk button
 
-  Scenario Outline: Invalid Login
-    Given User open the website GuruMu
+  Scenario Outline: Login user with invalid data
+    Given User already in GuruMu login page
     When User input "<email>" as email and input "<password>" as password
-    Then User see error "<errorMessage>" on login page
-  Examples:
-    | email             | password | errorMessage         |
-    | johndoe@gmail.com |          | Password is required |
-    |                   | 123      | Username is required |
+    And Alert pop-up will shown with message "data not found"
+    Examples:
+      | email                  | password    |
+      | unregistered@gmail.com | unregister  |
+      | wrongemail@gmail.com   | validpass   |
+      | validemail@gmail.com   | invalidpass |

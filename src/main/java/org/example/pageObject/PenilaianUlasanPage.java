@@ -13,10 +13,10 @@ public class PenilaianUlasanPage {
         this.driver = driver;
     }
 
-    @FindBy(id = "")
+    @FindBy(css = ".text-center")
     private WebElement displayPenilaianUlasanPage;
 
-    @FindBy(id = "")
+    @FindBy(xpath = "//p[@class='font-semibold pt-8 lg:pt-0 text-xl']")
     private WebElement displayNamaGuru;
 
     @FindBy(id = "")
@@ -26,19 +26,25 @@ public class PenilaianUlasanPage {
     private WebElement displaySuccessMessage;
 
 
-    @FindBy(id = "")
+    @FindBy(id = "input-ulasan")
     private WebElement inputUlasan;
 
-    @FindBy(id = "")
+    @FindBy(id = "input-penilaian")
     private WebElement inputPenilaian;
 
-    @FindBy(id = "")
+    @FindBy(id = "btn-nilai")
     private WebElement buttonNilai;
 
     @FindBy(id = "")
     private WebElement errorMessageInputUlasan;
     @FindBy(id = "")
     private WebElement errorMessageInputPenilaian;
+
+    @FindBy(xpath = "//h1[@class='text-navy text-center text-xl lg:text-3xl font-bold mb-5']")
+    private WebElement finishProfileModal;
+
+    @FindBy(css = ".top-0")
+    private WebElement closeFinishProfileModalBtn;
 
     public void setUlasan(String ulasan) {
         inputUlasan.sendKeys(ulasan);
@@ -80,6 +86,9 @@ public class PenilaianUlasanPage {
         return displayErrorMessage.isDisplayed();
     }
 
+    public boolean isFinishProfileMessage() {return finishProfileModal.isDisplayed();}
+
+    public void clickFinishProfileModal() {closeFinishProfileModalBtn.click();}
 
     public void clickUlasanField() {
         inputUlasan.click();
@@ -87,6 +96,10 @@ public class PenilaianUlasanPage {
 
     public void clickPenilaianField() {
         inputPenilaian.click();
+    }
+
+    public boolean isEnabledUlasanField() {
+        return inputUlasan.isEnabled();
     }
 
     public boolean isEnabledPenilaianField() {
