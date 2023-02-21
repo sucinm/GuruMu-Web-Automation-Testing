@@ -1,4 +1,4 @@
-@TestViewTeacher
+@TestViewTeacher @Test
 Feature: View Teacher
 
   Background:
@@ -6,6 +6,7 @@ Feature: View Teacher
     When User click avatar navigation
     Then User click menu Masuk
     And User input "shafirayuria@gmail.com" as email and input "Akuinhere22" as password
+    And User clicked masuk button
 
   Scenario: Verify 'user' button is enabled
     Given Teacher already on Beranda / Home

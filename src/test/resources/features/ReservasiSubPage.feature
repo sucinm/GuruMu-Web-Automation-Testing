@@ -1,7 +1,6 @@
-@Reservasi
+@Reservasi @Test
 Feature: Reservasi Sub Page
   Background:
-#    Given User open the website GuruMu
     When User click avatar navigation
     And User click menu Masuk
     And User input "sucimurid@gmail.com" as email and input "sucimurid" as password

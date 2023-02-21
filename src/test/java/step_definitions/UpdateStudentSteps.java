@@ -254,13 +254,13 @@ public class UpdateStudentSteps {
     public void studentFillAllDataForm() {
         updateStudentPage.isInputNamaLengkapEnabled();
         updateStudentPage.namaLengkapClicked();
-        updateStudentPage.setInputNamaLengkap("Uyuy");
+        updateStudentPage.setInputNamaLengkap("Update Nama Murid");
         updateStudentPage.isInputTeleponEnabled();
         updateStudentPage.inputTeleponClicked();
         updateStudentPage.setInputTelepon("082298007122");
         updateStudentPage.isInputEmailEnabled();
         updateStudentPage.inputEmailClicked();
-        updateStudentPage.setInputEmail("uyuyks@gmail.com");
+        updateStudentPage.setInputEmail("updatemurid@gmail.com");
         updateStudentPage.isInputAlamatEnabled();
         updateStudentPage.inputAlamatClicked();
         updateStudentPage.setInputAlamat("Jakarta Barat no 1-2");
@@ -283,7 +283,7 @@ public class UpdateStudentSteps {
         updateStudentPage.setInputTelepon("082298007122");
         updateStudentPage.isInputEmailEnabled();
         updateStudentPage.inputEmailClicked();
-        updateStudentPage.setInputEmail("uyuyks@gmail.com");
+        updateStudentPage.setInputEmail("updatemurid@gmail.com");
         updateStudentPage.isInputAlamatEnabled();
         updateStudentPage.inputAlamatClicked();
         updateStudentPage.setInputAlamat("Jakarta Barat no 1-2");
@@ -294,10 +294,10 @@ public class UpdateStudentSteps {
     public void studentFillAllDataFormButNotOnHandphoneField() {
         updateStudentPage.isInputNamaLengkapEnabled();
         updateStudentPage.namaLengkapClicked();
-        updateStudentPage.setInputNamaLengkap("Uyuy");
+        updateStudentPage.setInputNamaLengkap("Murid");
         updateStudentPage.isInputEmailEnabled();
         updateStudentPage.inputEmailClicked();
-        updateStudentPage.setInputEmail("uyuyks@gmail.com");
+        updateStudentPage.setInputEmail("updatemurid@gmail.com");
         updateStudentPage.isInputAlamatEnabled();
         updateStudentPage.inputAlamatClicked();
         updateStudentPage.setInputAlamat("Jakarta Barat no 1-2");
@@ -308,7 +308,7 @@ public class UpdateStudentSteps {
     public void studentFillAllDataFormButNotOnEmailField() {
         updateStudentPage.isInputNamaLengkapEnabled();
         updateStudentPage.namaLengkapClicked();
-        updateStudentPage.setInputNamaLengkap("Uyuy");
+        updateStudentPage.setInputNamaLengkap("Murid");
         updateStudentPage.isInputTeleponEnabled();
         updateStudentPage.inputTeleponClicked();
         updateStudentPage.setInputTelepon("082298007122");
@@ -322,13 +322,13 @@ public class UpdateStudentSteps {
     public void studentFillAllDataFormButNotOnAlamatField() {
         updateStudentPage.isInputNamaLengkapEnabled();
         updateStudentPage.namaLengkapClicked();
-        updateStudentPage.setInputNamaLengkap("Uyuy");
+        updateStudentPage.setInputNamaLengkap("Murid");
         updateStudentPage.isInputTeleponEnabled();
         updateStudentPage.inputTeleponClicked();
         updateStudentPage.setInputTelepon("082298007122");
         updateStudentPage.isInputEmailEnabled();
         updateStudentPage.inputEmailClicked();
-        updateStudentPage.setInputEmail("uyuyks@gmail.com");
+        updateStudentPage.setInputEmail("updatemurid@gmail.com");
         updateStudentPage.btnPerbaruiClicked();
     }
 
@@ -336,13 +336,13 @@ public class UpdateStudentSteps {
     public void studentFillAllDataFormButNotOnUnggahFotoField() {
         updateStudentPage.isInputNamaLengkapEnabled();
         updateStudentPage.namaLengkapClicked();
-        updateStudentPage.setInputNamaLengkap("Uyuy");
+        updateStudentPage.setInputNamaLengkap("Murid");
         updateStudentPage.isInputTeleponEnabled();
         updateStudentPage.inputTeleponClicked();
         updateStudentPage.setInputTelepon("082298007122");
         updateStudentPage.isInputEmailEnabled();
         updateStudentPage.inputEmailClicked();
-        updateStudentPage.setInputEmail("uyuyks@gmail.com");
+        updateStudentPage.setInputEmail("updatemurid@gmail.com");
         updateStudentPage.isInputAlamatEnabled();
         updateStudentPage.inputAlamatClicked();
         updateStudentPage.setInputAlamat("Jakarta Barat no 1-2");

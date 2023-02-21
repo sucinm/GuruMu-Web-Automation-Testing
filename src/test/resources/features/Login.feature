@@ -1,4 +1,4 @@
-
+@Login @Test
 Feature: Login
   As a user i want to login to GuruMu website
 

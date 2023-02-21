@@ -1,5 +1,5 @@
-target/
-driver/
+target
+driver
 build
 .gradle
 pom.xml.tag

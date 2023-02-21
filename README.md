@@ -8,11 +8,8 @@ Capstone Program Immersive Alterra Academy <br/>
 </div>
     
 ## About GuruMu
-GuruMu is an online private-study platform. Where users can order private tutors at any time. 
-Currently tutoring center located in more than 5 cities that combines online and offline learning.
-With GuruMu, no more obstacles to be able to learn independently. 
-GuruMu is available for students from elementary to high school and also serves all curricula in Indonesia.
-  
+GuruMu is an online private-study platform. Where users can learn from the best teachers at anytime, anywhere. Currently tutoring center located in more than 5 cities that combines online and offline learning. With GuruMu, no more obstacles to learn independently. GuruMu is available for students from elementary to high school and also serves all curricula in Indonesia.
+
 ## Collaboration
 - 👨‍💻 [Frontend](https://github.com/ALTA-Gurumu/Frontend)
 - ⚙  [Backend](https://github.com/ALTA-Gurumu/Backend)
@@ -20,13 +17,15 @@ GuruMu is available for students from elementary to high school and also serves 
 - 🔎 [Automation Web](https://github.com/ALTA-Gurumu/QE-Web)
 
 ## Report
-On Progress...
+<div align="center">
+<p>Report Automation Testing</p>
+<img  src="./images/JVM Report.png"><br/>
+</div>
 
 ## Tools
 <div>
 <p>Manual Testing</p>
       <a><img src="https://img.shields.io/badge/-Google%20Chrome-181717?style=for-the-badge&logo=GoogleChrome&color=f09559&logoColor=white"></a>
-      <img src="https://img.shields.io/badge/-Postman-181717?style=for-the-badge&logo=postman&color=f09559&logoColor=white">
       <p>Automation Testing</p>
       <img src="https://img.shields.io/badge/-java-181717?style=for-the-badge&logo=java&color=f09559">
       <img src="https://img.shields.io/badge/-Apache%20Maven-181717?style=for-the-badge&logo=Apache%20Maven&color=f09559&logoColor=white">
@@ -38,15 +37,6 @@ On Progress...
       <p>Management Project</p>
       <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&color=f09559">
 </div>
-
-
-## Team Quality Assurance Engineer:
-* Suci Nascaisar Maharani
-* David Louis Tandio
-* Muhammad Fikri Rabbani
-* Nurul Khalifatu Sa'diyah
-* Dicky Gustiatama
-
 
 ## 🔗 Git
 

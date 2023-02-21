@@ -517,7 +517,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -539,9 +539,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
 
@@ -556,7 +556,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -578,9 +578,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Specialis Mata Pelajaran' field")
@@ -593,7 +593,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -615,9 +615,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Jenjang Pendidikan' field")
@@ -630,7 +630,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -652,9 +652,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Unggah Ijazah' field")
@@ -667,7 +667,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickJenjangPendidikan();
         updateTeacherPage.selectJenjangPendidikan("Sekolah Dasar");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -689,9 +689,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Unggah Foto' field")
@@ -726,9 +726,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Gelar' field")
@@ -743,7 +743,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -763,9 +763,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Tentang Saya' field")
@@ -780,7 +780,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -801,9 +801,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Lokasi Saya' field")
@@ -818,7 +818,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -839,9 +839,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Offline' button in Ketersediaan field")
@@ -856,7 +856,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -877,9 +877,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Online' button in Ketersediaan field")
@@ -894,7 +894,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -915,9 +915,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Handphone' field")
@@ -932,7 +932,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -952,9 +952,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputCheckboxOffline();
         updateTeacherPage.clickInputCheckboxOnline();
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'Email' field")
@@ -969,7 +969,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -991,7 +991,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form but not on 'LinkedIn' field")
@@ -1006,7 +1006,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -1028,7 +1028,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
     }
 
     @Then("Teacher click 'Tambah Jadwal Mengajar' button")
@@ -1058,7 +1058,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerJamEnabled();
         updateTeacherPage.clickPickerJam();
         updateTeacherPage.setListJam("12:00 PM");
@@ -1077,9 +1077,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form 'Tambah Jadwal Mengajar' but not on Hour in 'Atur Waktu Mengajar' field")
@@ -1094,7 +1094,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -1113,9 +1113,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher fill all data form 'Tambah Jadwal Mengajar' but not on Maps in 'Atur Tempat Mengajar' field")
@@ -1130,7 +1130,7 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickIjazah();
         updateTeacherPage.setInputIjazah("Diploma");
         updateTeacherPage.clickInputPhoto();
-        updateTeacherPage.setInputPhoto("uyuy.png");
+        updateTeacherPage.setInputPhoto("update.png");
         updateTeacherPage.isPickerCalendarEnabled();
         updateTeacherPage.clickPickerCalendar();
         updateTeacherPage.setPickerCalendar("15/02/2023");
@@ -1149,9 +1149,9 @@ public class UpdateTeacherSteps {
         updateTeacherPage.clickInputHandphone();
         updateTeacherPage.setInputHandphone("081293507979");
         updateTeacherPage.clickInputEmail();
-        updateTeacherPage.setInputEmail("uyuyks@gmail.com");
+        updateTeacherPage.setInputEmail("updateguru@gmail.com");
         updateTeacherPage.clickInputLinkedin();
-        updateTeacherPage.setInputLinkedin("uyuyks");
+        updateTeacherPage.setInputLinkedin("updateguru");
     }
 
     @When("Teacher click 'Unggah Ijazah' field")
