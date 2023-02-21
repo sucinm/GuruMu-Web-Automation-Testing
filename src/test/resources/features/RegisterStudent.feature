@@ -1,4 +1,4 @@
-@Register
+@Register @Test
 Feature: Register Student
   As a user i want to register to GuruMu website
 

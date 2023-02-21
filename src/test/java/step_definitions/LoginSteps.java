@@ -38,7 +38,6 @@ public class LoginSteps {
     public void inputCredential(String email, String password) throws InterruptedException {
         loginPage.setEmail(email);
         loginPage.setPassword(password);
-        Thread.sleep(3000);
     }
 
     @Then("User see error \"(.*)\" on login page")
@@ -49,7 +48,6 @@ public class LoginSteps {
     @Then("User clicked masuk button")
     public void userClickMasukButton() throws InterruptedException {
         loginPage.clickLogin();
-        Thread.sleep(5000);
     }
 
     @Then("User cant clicked masuk button")

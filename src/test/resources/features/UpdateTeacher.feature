@@ -1,11 +1,12 @@
-@TestUpdateTeacher
+@TestUpdateTeacher @Test
 Feature: Update Teacher
 
   Background:
     Given User open the website GuruMu
     When User click avatar navigation
     And User click menu Masuk
-    And User input "zulfeekei@gmail.com" as email and input "be123" as password
+    And User input "updateguru@gmail.com" as email and input "updateguru" as password
+    And User clicked masuk button
     When User move to Profile Page
     And User move to edit profile
 
@@ -98,24 +99,24 @@ Feature: Update Teacher
     When Teacher click 'Unggah Ijazah' field
     Then Teacher Upload "<foto>" with 400 x 400 pixels in 'Unggah Ijazah' field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario Outline: Verify 'Unggah Ijazah' with under 400 x 400 pixels
     Given Teacher already on Edit Profile page
     When Teacher click 'Unggah Ijazah' field
     Then Teacher Upload "<foto>" with under 400 x 400 pixels in 'Unggah Ijazah' field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario Outline: Verify 'Unggah Ijazah' with over 400 x 400 pixels
     Given Teacher already on Edit Profile page
     When Teacher click 'Unggah Ijazah' field
     Then Teacher Upload "<foto>" with over 400 x 400 pixels in 'Unggah Ijazah' field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario: Verify 'Unggah Ijazah' field is enabled
     Given Teacher already on Edit Profile page
@@ -127,24 +128,24 @@ Feature: Update Teacher
     When Teacher click 'Unggah Foto' field
     Then Teacher Upload "<foto>" with 400 x 400 pixels in 'Unggah Foto' field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario Outline: Verify 'Unggah Foto' with under 400 x 400 pixels
     Given Teacher already on Edit Profile page
     When Teacher click 'Unggah Foto' field
     Then Teacher Upload "<foto>" with under 400 x 400 pixels in 'Unggah Foto' field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario Outline: Verify 'Unggah Foto' with over 400 x 400 pixels
     Given Teacher already on Edit Profile page
     When Teacher click 'Unggah Foto' field
     Then Teacher Upload "<foto>" with over 400 x 400 pixels in 'Unggah Foto' field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario: Verify 'Date' field in Atur Waktu Mengajar is enabled
     Given Teacher already on Edit Profile page
@@ -206,16 +207,16 @@ Feature: Update Teacher
     When Teacher click 'Gelar' field
     Then Teacher input with Character like "<aboutme>" in 'Gelar' field
     Examples:
-      | aboutme                         |
-      | Nurul Khalifatu Sadiyah Amd Kom |
+      | aboutme                  |
+      | S1 Pendidikan Metematika |
 
   Scenario Outline: Input Field with Character and Number in 'Gelar' field
     Given Teacher already on Edit Profile page
     When Teacher click 'Gelar' field
     Then Teacher input with Character and Number like "<aboutme>" in 'Gelar' field
     Examples:
-      | aboutme                              |
-      | Nurul Khalifatu Sadiyah Amd Kom 2017 |
+      | aboutme                       |
+      | S1 Pendidikan Metematika 2017 |
 
   Scenario Outline: Input Field with Special Character in 'Gelar' field
     Given Teacher already on Edit Profile page
@@ -230,8 +231,8 @@ Feature: Update Teacher
     When Teacher click 'Gelar' field
     Then Teacher input with Character and Special Character like "<aboutme>" in 'Gelar' field
     Examples:
-      | aboutme                         |
-      | Nurul Khalifatu Sadiyah Amd.Kom |
+      | aboutme                    |
+      | S1 (Pendidikan Metematika) |
 
   Scenario: Verify 'Pengalaman' field is enabled
     Given Teacher already on Edit Profile page
@@ -243,16 +244,16 @@ Feature: Update Teacher
     When Teacher click 'Pengalaman' field
     Then Teacher input with Character like "<experience>" in 'Gelar' field
     Examples:
-      | experience              |
-      | Fullstack Web Developer |
+      | experience |
+      | Belum ada  |
 
   Scenario Outline: Input Field with Character and Number in 'Pengalaman' field
     Given Teacher already on Edit Profile page
     When Teacher click 'Pengalaman' field
     Then Teacher input with Character and Number like "<experience>" in 'Gelar' field
     Examples:
-      | experience                   |
-      | Fullstack Web Developer 2022 |
+      | experience                |
+      | Guru SD Negeri 11 Jakarta |
 
   Scenario Outline: Input Field with Special Character in 'Pengalaman' field
     Given Teacher already on Edit Profile page
@@ -267,8 +268,8 @@ Feature: Update Teacher
     When Teacher click 'Pengalaman' field
     Then Teacher input with Character and Special Character like "<experience>" in 'Gelar' field
     Examples:
-      | experience                     |
-      | Fullstack Web Developer : 2022 |
+      | experience                       |
+      | 2020 - Guru SD Negeri 11 Jakarta |
 
   Scenario: Verify 'Lokasi Asal' field is enabled
     Given Teacher already on Edit Profile page
@@ -356,16 +357,16 @@ Feature: Update Teacher
     When Teacher click 'Email' field
     Then Teacher input with valid name like "<email>" in 'Email' field
     Examples:
-      |       email       |
-      | uyuyks@gmail.com  |
+      | email                |
+      | updateguru@gmail.com |
 
   Scenario Outline: Input Field with Not Valid Email in 'Email' field
     Given Teacher already on Edit Profile page
     When Teacher click 'Email' field
     Then Teacher input with valid name like "<email>" in 'Email' field
     Examples:
-      |    email     |
-      | uyuyks@gmail |
+      | email            |
+      | updateguru@gmail |
 
   Scenario Outline: Input Field with Chacter in 'Email' field
     Given Teacher already on Edit Profile page
@@ -401,8 +402,8 @@ Feature: Update Teacher
     When Teacher click 'LinkedIn' field
     Then Teacher input with character like "<linkedin>" in 'LinkedIn' field
     Examples:
-      | linkedin |
-      | uyuyks   |
+      | linkedin   |
+      | updateguru |
 
   Scenario Outline: Input Field with Number in 'LinkedIn' field
     Given Teacher already on Edit Profile page
@@ -417,8 +418,8 @@ Feature: Update Teacher
     When Teacher click 'LinkedIn' field
     Then Teacher input with character and number like "<linkedin>" in 'LinkedIn' field
     Examples:
-      | linkedin     |
-      | uyuyks123456 |
+      | linkedin      |
+      | updateguru123 |
 
   Scenario Outline: Input Field with Special Character in 'LinkedIn' field
     Given Teacher already on Edit Profile page

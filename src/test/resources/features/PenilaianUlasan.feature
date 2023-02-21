@@ -6,6 +6,7 @@ Feature: Penilaian Ulasan
     When User click avatar navigation
     And User click menu Masuk
     And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
+    And User clicked masuk button
     When User move to History Murid Page
     And Student click Riwayat submenu
     And Sub menu Riwayat is active

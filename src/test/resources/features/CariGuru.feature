@@ -1,4 +1,4 @@
-@CariGuru
+@CariGuru @Test
 Feature: Cari guru
 
   Background:
@@ -6,6 +6,7 @@ Feature: Cari guru
     When User click avatar navigation
     And User click menu Masuk
     And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
+    And User clicked masuk button
 
   Scenario: Verify 'mata pelajaran' field is displayed
     When Student click menu Beranda

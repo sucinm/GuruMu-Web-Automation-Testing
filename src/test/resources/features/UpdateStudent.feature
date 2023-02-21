@@ -1,11 +1,12 @@
-@TestUpdateStudent
+@TestUpdateStudent @Test
 Feature: Update Student
 
   Background:
     Given User open the website GuruMu
     When User click avatar navigation
     And User click menu Masuk
-    And User input "herdiladania11@gmail.com" as email and input "fe123" as password
+    And User input "updatemurid@gmail.com" as email and input "updatemurid" as password
+    And User clicked masuk button
     When User move to Profile Page
     And User click edit profile
 
@@ -19,8 +20,8 @@ Feature: Update Student
     When Student click Nama Lengkap field
     Then Student input with valid name like "<name>" in Nama Lengkap field
     Examples:
-      |            name          |
-      | Nurul Khalifatu Sadiyah  |
+      | name              |
+      | Update Murid Name |
 
   Scenario Outline: Input Field with Number in Nama Lengkap field
     Given Student already on Edit Profile page
@@ -117,16 +118,16 @@ Feature: Update Student
     When Student click Email field
     Then Student input with valid name like "<email>" in Email field
     Examples:
-      |       email       |
-      | uyuyks@gmail.com  |
+      | email                 |
+      | updatemurid@gmail.com |
 
   Scenario Outline: Input Field with Not Valid Email in Email field
     Given Student already on Edit Profile page
     When Student click Email field
     Then Student input with valid name like "<email>" in Email field
     Examples:
-      |    email     |
-      | uyuyks@gmail |
+      | email   |
+      | updatemurid@gmail |
 
   Scenario Outline: Input Field with Chacter in Email field
     Given Student already on Edit Profile page
@@ -215,24 +216,24 @@ Feature: Update Student
     When Student click Unggah Foto field
     Then Student Upload "<foto>" with 400 x 400 pixels in Unggah Foto field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario Outline: Verify Unggah Foto with under 400 x 400 pixels
     Given Student already on Edit Profile page
     When Student click Unggah Foto field
     Then Student Upload "<foto>" with under 400 x 400 pixels in Unggah Foto field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario Outline: Verify Unggah Foto with over 400 x 400 pixels
     Given Student already on Edit Profile page
     When Student click Unggah Foto field
     Then Student Upload "<foto>" with over 400 x 400 pixels in Unggah Foto field
     Examples:
-      |       foto      |
-      |     uyuy.png    |
+      | foto       |
+      | update.png |
 
   Scenario: Verify X button is enabled
     Given Student already on Edit Profile page

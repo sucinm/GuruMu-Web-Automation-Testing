@@ -1,4 +1,4 @@
-@Register
+@Register @Test
 Feature: Lengkapi Data Guru
   As a teacher i want to complete my profile
 

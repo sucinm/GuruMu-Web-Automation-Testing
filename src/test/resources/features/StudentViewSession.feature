@@ -1,10 +1,11 @@
-@StudentViewSession
+@StudentViewSession @Test
 Feature: Student view session
 
   Background:
     When User click avatar navigation
     And User click menu Masuk
     And User input "sucimurid@gmail.com" as email and input "sucimurid" as password
+    And User clicked masuk button
     And Student click menu Beranda
     And Student click profile icon button
 

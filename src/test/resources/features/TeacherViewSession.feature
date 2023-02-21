@@ -1,10 +1,11 @@
-@TeacherViewSession
+@TeacherViewSession @Test
 Feature: Teacher view session
 
   Background:
     When User click avatar navigation
     And User click menu Masuk
     And User input "suciguru@alta.com" as email and input "suciguru" as password
+    And User clicked masuk button
     And Student click menu Beranda
     And Student click profile icon button
 
