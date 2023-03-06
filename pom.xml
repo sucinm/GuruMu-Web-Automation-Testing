@@ -140,7 +140,7 @@
                         </goals>
                         <configuration>
                             <projectName>Project Name</projectName>
-                            <outputDirectory>${project.build.directory}/Report/cucumber-reports</outputDirectory>
+                            <outputDirectory>report</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
                             <skippedFails>true</skippedFails>
                         </configuration>
