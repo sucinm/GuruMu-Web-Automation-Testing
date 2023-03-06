@@ -21,4 +21,16 @@ jobs:
         chmod +x ./scripts/InstallChrome.sh
                    ./scripts/InstallChrome.sh
     - name: Build with Maven
-      run: mvn clean test
+      run: mvn clean test -Dcucumber.filter.tags=@CariGuru
+
+    - name: Commit Files Report # transfer the new html files back into the repository
+      run: |
+        git config --local user.name "sucinm"
+        git add ./target
+        git commit -m "Updating the repository report"
+    
+    - name: Push changes # push the output folder to your repo
+      uses: ad-m/github-push-action@main
+      with:
+        github_token: ${{ secrets.KEY }}
+        force: true
